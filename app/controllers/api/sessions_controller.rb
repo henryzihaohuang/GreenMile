@@ -9,7 +9,7 @@ class Api::SessionsController < ApplicationController
             login(@user)
             render "api/users/show"
         else
-            render json: ["Invalid credentials, please try again."]
+            render json: ["Invalid credentials, please try again."],
             status: 401
         end
     end
@@ -21,7 +21,7 @@ class Api::SessionsController < ApplicationController
             logout
             render "api/users/show"
         else
-            render json: "Please sign in", status: 404
+            render json: ["Please sign in"], status: 404
         end
     end
 end
