@@ -1,0 +1,2 @@
+class WatchlistedStock < ApplicationRecord
+end

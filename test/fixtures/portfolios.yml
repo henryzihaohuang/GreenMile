@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  stocks_id: 1
+  num_shares: MyString
+
+two:
+  user_id: 1
+  stocks_id: 1
+  num_shares: MyString
