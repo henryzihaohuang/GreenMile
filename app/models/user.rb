@@ -1,18 +1,19 @@
 class User < ApplicationRecord
 
-    attr_reader :password
+    # Figvaper
     validates :first_name, presence: true, uniqueness: true
     validates :last_name, presence: true, uniqueness: true
     validates :email, presence: true, uniqueness: true
     validates :password_digest, :session_token, presence: true
-    validates :password, length: {minimum: 6}, allow_nil: true
-
+    validates :password, length: { minimum: 6 }, allow_nil: true
     after_initialize :ensure_session_token
+
+    attr_reader :password
 
     def self.find_by_credentials(email, password)
         user = User.find_by(email: email)
-        return nil unless user
-        user.is_password?(password) ? user : nil
+        return nil unless user && user.is_password?(password)
+        return user
     end
 
     def password= (password)

@@ -1,4 +1,12 @@
 class Api::SessionsController < ApplicationController
+
+    before_action :require_logged_in, only: [:destroy]
+
+    def new
+        render :new
+    end
+
+
     def create
         @user = User.find_by_credentials(
             params[:user][:username],
@@ -24,4 +32,10 @@ class Api::SessionsController < ApplicationController
             render json: ["Please sign in"], status: 404
         end
     end
+
+    def destroy
+        logout!
+        render json: { message: 'Logout successful' }
+    end
+    
 end

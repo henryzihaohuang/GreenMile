@@ -7,7 +7,7 @@ import { AuthRoute, ProtectedRoute } from '../utils/route_utils';
 
 // To Do: ProtectedRoute still needs to be written
 
-export default () => {
+const App = () => {
     return (
         <div>
             <Route path="/" component={NavBarContainer} />
@@ -17,3 +17,5 @@ export default () => {
         </div>
     )
 };
+
+export default App;
