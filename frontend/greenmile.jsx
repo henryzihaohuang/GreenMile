@@ -6,17 +6,18 @@ import { login, signup, logout } from './actions/session';
 
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById("root");
-    const store = configureStore();
+    let store = configureStore();
 
-
-    let preloadedState = undefined;
-    if (window.currentUser) {
-        preloadedState = {
-            session: {
-                currentUser: window.currentUser
-            }
-        };
-    }
+    // let preloadedState = undefined;
+    
+    // if (window.currentUser) {
+    //     preloadedState = {
+    //         session: { id: window.currentUser.id },
+    //         errors:{}
+    //     };
+    //     store = configureStore(preloadedState);
+    //     delete window.currentUser;
+    // } 
 
     // testing//
     window.store = configureStore();

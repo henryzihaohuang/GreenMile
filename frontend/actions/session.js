@@ -4,9 +4,9 @@ export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
 export const LOGOUT_CURRENT_USER = "LOGOUT_CURRENT_USER";
 export const RECEIVE_SESSION_ERRORS = "RECEIVE_ERRORS";
 
-const receiveCurrentUser = user => ({
+const receiveCurrentUser = currentUser => ({
     type: RECEIVE_CURRENT_USER,
-    user
+    currentUser
 })
 
 const logoutCurrentUser = () => ({
@@ -18,24 +18,27 @@ const receiveErrors = errors => ({
     errors
 });
 
-export const signup = formUser => {
+export const signup = (formUser) => {
+    // debugger
     return (dispatch) => {
-        return (postUser(formUser)
-        .then(user => dispatch(receiveCurrentUser(user))),
-        errors => dispatch(receiveErrors(errors)));
+        return postUser(formUser)
+            .then((currentUser) => dispatch(receiveCurrentUser(currentUser)),
+            (errors) => dispatch(receiveErrors(errors.responseJSON)));
     }
 } 
 
-export const login = formUser => {
+export const login = (formUser) => {
+    // debugger
     return (dispatch) => {
-        return (postSession(formUser)
-        .then(user => dispatch(receiveCurrentUser(user))));
+        return postSession(formUser)
+            .then((currentUser)=> dispatch(receiveCurrentUser(currentUser)),
+            (errors) => dispatch(receiveErrors(errors.responseJSON)));
     }
 }
 
 export const logout = () => {
     return (dispatch) => {
-        return (deleteSession()
-        .then(() => dispatch(logoutCurrentUser())));
+        return deleteSession()
+        .then(() => dispatch(logoutCurrentUser()));
     }
 }
