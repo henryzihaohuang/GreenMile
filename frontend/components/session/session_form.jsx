@@ -24,13 +24,6 @@ class SessionForm extends React.Component {
 
     render() {
         // debugger
-        const errors = this.props.errors.map((error) => {
-            
-            return (
-                <li>{error}</li>
-            )
-        });
-
         const signupPage = () => {
             return (
             <div className="session-form">
@@ -69,7 +62,6 @@ class SessionForm extends React.Component {
                     <button onClick={this.handleSubmit}>Sign Up </button>
 
                 </form>
-                <ul>{errors}</ul>
             </div>
         )};
 
@@ -97,7 +89,6 @@ class SessionForm extends React.Component {
                         <button onClick={this.handleSubmit}>Sign In </button>
 
                     </form>
-                    <ul>{errors}</ul>
                 </div>
             )
         }; 
