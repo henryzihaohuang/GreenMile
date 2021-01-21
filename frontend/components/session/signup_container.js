@@ -7,8 +7,8 @@ const mStP = (state, ownProps) => {
     return {
 
         user: {
-            first_name: "",
-            last_name: "",
+            firstName: "",
+            lastName: "",
             email: "",
             password: ""
         },

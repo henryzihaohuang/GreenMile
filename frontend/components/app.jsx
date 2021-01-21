@@ -6,12 +6,16 @@ import Home from './home/home';
 import { Route } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../utils/route_utils';
 
-// To Do: ProtectedRoute still needs to be written
+// To Do: ProtectedRoute still needs to be written for portfolio/stocks
 
 const App = ({state}) => {
     return (
         <div>
-            <Route path="/" component={NavBarContainer} />
+            <Route children={({match}) => {
+                console.log(match);
+                if (match.path === "/signup") return null;
+                return <NavBarContainer />;
+            }} />
             <Route exact path="/" component={Home} />
             <Route exact path="/login" component={LogInContainer} />
             <AuthRoute path="/signup" component={SignUpContainer} />

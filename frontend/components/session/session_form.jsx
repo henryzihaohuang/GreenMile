@@ -34,15 +34,15 @@ class SessionForm extends React.Component {
                     <label>First name:
                         <input 
                         type="text" 
-                        value={this.state.first_name} 
-                        onChange={this.handleInput('first_name')} />
+                        value={this.state.firstName} 
+                        onChange={this.handleInput('firstName')} />
                     </label>
 
                     <label>Last name:
                         <input 
                         type="text" 
-                        value={this.state.last_name} 
-                        onChange={this.handleInput('last_name')} />
+                        value={this.state.lastName} 
+                        onChange={this.handleInput('lastName')} />
                     </label>
 
                     <label>Email:
@@ -93,8 +93,14 @@ class SessionForm extends React.Component {
             )
         }; 
 
-        return (this.props.formType === 'signup') ? signupPage() : loginPage();
+        return (
+            <div>
+            <img className="session-img" alt="session-img" src="https://cdn.robinhood.com/assets/generated_assets/632fcb3e7ed928b2a960f3e003d10b44.jpg" /> 
+            
+            {this.props.formType === 'signup' ? signupPage() : loginPage()}
 
+            </div>
+        )
     }
 }
 
