@@ -13,46 +13,65 @@ class SessionForm extends React.Component {
         const user = Object.assign({}, this.state);
         this.props.action(user)
         .then(() => this.props.history.push("/"));
-    }
+    };
 
     handleInput(field) {
         // debugger
         return (e) => {
             this.setState({ [field]: e.target.value });
         }
-    }
+    };
+
+    handleErrors() {
+
+        const errorClass = this.props.errors.length > 0 ? "error-reveal" : "error-hidden";
+        // debugger
+        return(
+            <ul className = {errorClass}>
+                {this.props.errors.map((error, i)=>{
+                    return(
+                        <li key={`${i}`}>{error}</li>
+                    )
+                })}
+            </ul>
+        )
+    };
 
     render() {
         // debugger
+
         const signupPage = () => {
             return (
-            <div className="session-form">
-                <h1>Make your money move</h1>
-                <h3>GreenMile lets you invest in companies you love, commission-free.</h3>
+            <div>
+                    
+                <h1 className="form-greeting">Make your money move</h1>
+                <h3 className="form-greeting">GreenMile lets you invest in companies you love, commission-free.</h3>
+                <br/>
 
+                {this.handleErrors()}
                 <form>
-                    <label>First name:
+                        <label className="label-text">First name:
                         <input 
                         type="text" 
                         value={this.state.firstName} 
                         onChange={this.handleInput('firstName')} />
                     </label>
 
-                    <label>Last name:
+                        <label className="label-text">Last name:
                         <input 
                         type="text" 
                         value={this.state.lastName} 
                         onChange={this.handleInput('lastName')} />
                     </label>
 
-                    <label>Email:
+                        <label className="label-text">Email:
                         <input 
                         type="text" 
                         value={this.state.email} 
                         onChange={this.handleInput('email')} />
                     </label>
 
-                    <label>Password:
+                        <label className="label-text">Password:
                         <input 
                         type="password" 
                         value={this.state.password} 
@@ -68,18 +87,20 @@ class SessionForm extends React.Component {
 
         const loginPage = () => {
             return (
-                <div className="session-form"> 
-                    <h3>Welcome to GreenMile</h3>
+                <div> 
+                    <h3 className="form-greeting" >Welcome to GreenMile</h3>
+                    <br />
+                    {this.handleErrors()}
 
                     <form>
-                    <label>Email:
+                    <label className="label-text">Email:
                         <input
                             type="text"
                             value={this.state.email}
                             onChange={this.handleInput('email')} />
                     </label>
 
-                    <label>Password:
+                    <label className="label-text">Password:
                         <input
                             type="password"
                             value={this.state.password}
@@ -94,7 +115,7 @@ class SessionForm extends React.Component {
         }; 
 
         return (
-            <div>
+            <div className="session-form">
             <img className="session-img" alt="session-img" src="https://cdn.robinhood.com/assets/generated_assets/632fcb3e7ed928b2a960f3e003d10b44.jpg" /> 
             
             {this.props.formType === 'signup' ? signupPage() : loginPage()}

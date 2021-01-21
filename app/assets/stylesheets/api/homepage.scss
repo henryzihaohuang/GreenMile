@@ -1,0 +1,76 @@
+html, body, div {
+   padding: 0;
+   margin: 0;
+   font-family: 'Roboto', sans-serif;
+ }
+
+.logo {
+     font-family: 'Roboto', sans-serif;
+     font-size: 26px;
+ }
+
+ .homepage {
+    background-color: rgb(195,245,59);
+    background-size: 100%;
+    max-height:680px;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 2fr ;
+ }
+
+ .splash-text {
+    font-family: 'Roboto', sans-serif;
+    line-height: 59px;
+    font-size: 50px;
+    grid-column-start:2;
+    grid-row-start:2;
+    justify-self:end;
+    
+    z-index: 1;
+    color: black;
+    clear:none;
+ }
+
+ .splash-subtext {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    grid-column-start:2;
+    grid-row-start:2;
+    margin-top:140px;
+    align-self: start;
+    z-index: auto;
+    color: black;
+    word-wrap: break-word;
+    
+ }
+
+.banner-button{
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: 400px;
+    color: white;
+    grid-column-start: 3;
+    grid-row-start:3;
+    padding: 10px;
+    margin: 10px;
+    background-color: black;
+    border-radius: 40px;
+
+}
+ .home-img-frame {
+   grid-column-start:3;
+   grid-row-start:2;
+   width: 100%;
+   height:100%;
+ }
+
+ .nav-bar {
+   font-family: 'Roboto', sans-serif ;
+   display: flex;
+   justify-content: space-between;
+   height:60px;
+   background: white;
+   align-items: center;
+   box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.3);
+ }

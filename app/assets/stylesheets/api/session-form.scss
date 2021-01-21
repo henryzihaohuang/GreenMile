@@ -1,0 +1,56 @@
+// Place all the styles related to the api/sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+ .session-form {
+    display: grid;
+    grid-template-columns: 50% 50%;
+ }
+ 
+ .session-img {
+  grid-column-start: 1;
+  object-fit: cover;
+  height: 690px;
+  width: 100%;
+  overflow: hidden;
+ }
+
+ form {
+    height: 300px;
+    width: 300px;
+    grid-column-start: 2;
+    align-self: center;
+    justify-self: center ;
+ }
+
+ label {
+    display: flex;
+    padding: 10px;
+    grid-column-start: 2;
+ }
+
+ .form-greeting{
+     font-family: 'Roboto', sans-serif;
+ }
+
+ .label-text{
+     font-family: 'Roboto', sans-serif;
+     font-size: 13px;
+ }
+
+ button {
+    font-family: 'Roboto', sans-serif;
+    display: block;
+    padding: 10px;
+    margin: 10px;
+    background-color: transparent;
+    border-radius: 10px;
+ }
+
+  .error-reveal {
+   font-family: 'Courier New', Courier, monospace;
+   font-size: 16px;
+ }
+
+ .error-hidden {
+   visibility: none;
+ }
