@@ -15,13 +15,28 @@ class Portfolio extends React.Component {
 
     render(){
         return(
-            <div>
-            <h1>Portfolio</h1>
-            
-            <h2>Balance: $10000000000 babyyyyy kaching kaching you r rich</h2>
+            <div className="portfolio">
+                <div className="portfolio-content">
+                    <div className="portfolio-header">
+                        <header>
+                            <h1>Portfolio</h1>
+                        </header>
+                    </div>
+                    
+                    <div className="balance-statement">
+                        <h2>Balance: $10000000000 
+                            <br />
+                            babyyyyy kaching kaching you r rich
+                            <br /> congrajulashuns</h2>
+                    </div>
 
-                <button onClick={this.handleSubmit}>Logout</button>
-    
+                    <img className="placeholder-img "src="https://i.ytimg.com/vi/if-2M3K1tqk/maxresdefault.jpg" />
+
+                    <div className="portfolio-logout-box">
+                        <button className="portfolio-logout"onClick={this.handleSubmit}>Logout</button>
+                    </div>
+                
+                </div>
             </div>
 
         )

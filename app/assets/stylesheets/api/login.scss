@@ -46,7 +46,7 @@
 
 
 
-input{
+.input{
     border: 1px solid lightgrey;
     outline: none;
     border-radius: 4px;
@@ -55,9 +55,10 @@ input{
     padding-left: 12px;
     padding-right: 12px;
     text-indent: 10px;
+    
 }
 
-input:hover {
+.input:hover {
     border-color: #00C810;
     transition: all 1s ease;
     -webkit-transition: all 1s ease;
@@ -67,6 +68,35 @@ input:hover {
     font-size: 13px;
     font-weight: bold;
     margin-top: 25px;
+}
+
+.forgot-password{
+    font-size: 13px;
+    color:#47c807;
+    width: 300px;
+    margin-top: 16px;
+}
+
+.session-submit-box {
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+
+}
+.demo-submit {
+    width: 125px;
+    height: 45px;
+    margin-top: 88px;
+
+    border: none;
+    background-color: #00C810;
+    border-radius: 4px;
+    
+    text-align: center;
+    color: white;
+
+    font-weight: bold;
+    font-size: 12px;
 }
 
 .session-submit {
@@ -91,7 +121,7 @@ input:hover {
 
 .error-reveal {
    font-family: 'Roboto', sans-serif;
-   font-size: 16px;
+   font-size: 13px;
 }
 
 .error-hidden {

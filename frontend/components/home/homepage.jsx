@@ -15,7 +15,7 @@ class Homepage extends React.Component {
                     <div className="green-mile-textbox">
                         <a className="green-mile-text" href="/"> GreenMile </a>  
 
-                            <a href="/"><img className="logo-img" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/76545489-55d6-4b21-90d2-66145f355fa5/d4i9b1a-854093b9-b960-45a3-bd7a-3800965c58be.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvNzY1NDU0ODktNTVkNi00YjIxLTkwZDItNjYxNDVmMzU1ZmE1XC9kNGk5YjFhLTg1NDA5M2I5LWI5NjAtNDVhMy1iZDdhLTM4MDA5NjVjNThiZS5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.DtNmoXN2rftuTzPkPhA6mqUv-j4wUrOtfF3hQa6Eu18" />
+                            <a href="/"><img className="logo-img" src={window.logoURL} />
                             </a>
                     </div> 
 
@@ -53,8 +53,11 @@ class Homepage extends React.Component {
 
                                 
 
-                                <div className="disclosure-textbox">
-                                    <h4><img className="info-img" src="https://icon-library.net/images/info-icon-png-transparent/info-icon-png-transparent-2.jpg" />    Free Stock Disclosure</h4>
+                                <div className="disclosure-textbox" onClick={() => this.props.openModal('disclosure')}>
+                            
+                                        <div className="info-img"><img  src={window.infoURL} /> </div>
+                                        <div className="disclosure-text"><h4>Free Stock Disclosure</h4></div>
+                            
                                 </div>
                                 
 

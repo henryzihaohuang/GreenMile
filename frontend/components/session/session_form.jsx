@@ -5,7 +5,9 @@ class SessionForm extends React.Component {
         super(props);
 
         this.state = this.props.user
+
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDemo = this.handleDemo.bind(this);
     }
 
     handleSubmit(e) {
@@ -37,6 +39,11 @@ class SessionForm extends React.Component {
         )
     };
 
+    handleDemo(e) {
+        this.props.action({ email: "dollyparton@gmail.com", password: "password" })
+    }
+
+
     // inputFocus(i) {
     //     if (i.value == i.defaultValue) { i.value = ""; i.style.color = "#000"; }
     // }
@@ -48,74 +55,87 @@ class SessionForm extends React.Component {
         const signupPage = () => {
             return (
                 <div className="signup-page">
-                    <div className="form-box">
-                        <form className="form-area">
-                        <div className="green-mile-textbox">
-                            <a className="green-mile-text" href="/"> GreenMile </a>
-
-                            <a href="/"><img className="logo-img" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/76545489-55d6-4b21-90d2-66145f355fa5/d4i9b1a-854093b9-b960-45a3-bd7a-3800965c58be.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvNzY1NDU0ODktNTVkNi00YjIxLTkwZDItNjYxNDVmMzU1ZmE1XC9kNGk5YjFhLTg1NDA5M2I5LWI5NjAtNDVhMy1iZDdhLTM4MDA5NjVjNThiZS5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.DtNmoXN2rftuTzPkPhA6mqUv-j4wUrOtfF3hQa6Eu18" />
-                            </a>
-                        </div>
+                    
+                    <div className="form-area">
+                        <form className="form-box">
+                            
                         <div className="form-greeting-box">
+                                <div className="logo-textbox">
+                                    <a className="green-mile-text" href="/"> GreenMile </a>
+
+                                    <a href="/"><img className="logo-img" src={window.logoURL} />
+                                    </a>
+                                </div>
+                            </div>
+
                             <div className="form-greeting">
                                     <h1 className="form-greeting"><span>Make Your Money Move</span></h1>
                                     <br />
                                     <h3 className="form-greeting2"><span>GreenMile lets you invest in companies you love, commission-free.</span></h3>
                             </div>
-                        </div>
+                        
 
                         <div className="error-messages">
                             {this.handleErrors()}
                         </div>
 
+                            <div className="first-last-inputs">
+                                <div className="firstname-input">
+                                    <input 
+                                    type="text" 
+                                    value={this.state.firstName} 
+                                    onChange={this.handleInput('firstName')} 
+                                    className=""
+                                    placeholder="First Name"/>
+                                </div>
 
-                            <div className="firstname-input">
-                                <input 
-                                type="text" 
-                                value={this.state.firstName} 
-                                onChange={this.handleInput('firstName')} 
-                                className="firstname"
-                                placeholder="First Name"/>
+                                <div className="lastname-input">
+                                    <input 
+                                    type="text" 
+                                    value={this.state.lastName} 
+                                    onChange={this.handleInput('lastName')}
+                                    className="" 
+                                    placeholder="Last Name"/>
+                                </div>
                             </div>
 
-                            <div className="lastname-input">
-                                <input 
-                                type="text" 
-                                value={this.state.lastName} 
-                                onChange={this.handleInput('lastName')}
-                                className="lastname" 
-                                placeholder="Last Name"/>
-                            </div>
+                            <div className="email-password">
+                                <div className="form-input">
+                                    <input 
+                                    type="text" 
+                                    value={this.state.email} 
+                                    onChange={this.handleInput('email')} 
+                                    className="input-textbox"
+                                    placeholder="E-mail"/>
+                                </div>
 
-                            <div className="input">
-                                <input 
-                                type="text" 
-                                value={this.state.email} 
-                                onChange={this.handleInput('email')} 
-                                className="email"
-                                placeholder="E-mail"/>
-                            </div>
-
-                            <div className="signup-form-password-entry">
-                                <input 
-                                type="password" 
-                                value={this.state.password} 
-                                onChange={this.handleInput('password')}
-                                className="password" 
-                                placeholder="Password"/>
+                                <div className="form-input">
+                                    <input 
+                                    type="password" 
+                                    value={this.state.password} 
+                                    onChange={this.handleInput('password')}
+                                    className="input-textbox" 
+                                    placeholder="Password"/>
+                                </div>
                             </div>
 
                             <button className="session-submit" onClick={this.handleSubmit}>Continue </button>
 
                             <div className="footer-box">
                                 <div className="signup-footer">
+
                                 <p>All investments involve risk, including the possible loss of principal. Investors should consider their investment objectives and risks carefully before investing.
                                 <br />
-                                Commission-free trading means $0 commission trading on self-directed individual cash or margin brokerage accounts that trade U.S. listed securities via mobile devices or web. Keep in mind, other fees such as trading (non-commission) fees, Gold subscription fees, wire transfer fees, and paper statement fees may apply to your brokerage account. Please see GreenMile Financial’s <a src="https://cdn.robinhood.com/assets/robinhood/legal/RHF%20Fee%20Schedule.pdf">fee schedule</a> to learn more.
+                                
+                                <p>Commission-free trading means $0 commission trading on self-directed individual cash or margin brokerage accounts that trade U.S. listed securities via mobile devices or web. Keep in mind, other fees such as trading (non-commission) fees, Gold subscription fees, wire transfer fees, and paper statement fees may apply to your brokerage account. Please see GreenMile Financial’s <a src="https://cdn.robinhood.com/assets/robinhood/legal/RHF%20Fee%20Schedule.pdf">fee schedule</a> to learn more.
+                                </p>
+
                                 <br />
-                                Securities trading offered through GreenMile Financial LLC. Brokerage clearing services offered through GreenMile Securities, LLC. Both are subsidiaries of GreenMile Markets, Inc.
+                                <p>Securities trading offered through GreenMile Financial LLC. Brokerage clearing services offered through GreenMile Securities, LLC. Both are subsidiaries of GreenMile Markets, Inc.
+                                </p>
                                 <br />
-                                <a src="https://brokercheck.finra.org/">Check the background of GreenMile Financial LLC and GreenMile Securities, LLC on FINRA’s BrokerCheck.</a>
+                                <p><a src="https://brokercheck.finra.org/">Check the background of GreenMile Financial LLC and GreenMile Securities, LLC on FINRA’s BrokerCheck.</a>
+                                </p>
                                 <br />
                                 © 2020 GreenMile. All rights definitely not reserved.</p>
                                 </div>
@@ -194,15 +214,20 @@ class SessionForm extends React.Component {
                                         onChange={this.handleInput('password')} 
                                         className="password"/>
                                 </div>
+
+                                <div className="forgot-password">
+                                    <p>Forgot your username or password? Try our demo account!</p>
+                                </div>
                             
                                 <div className="error-messages">
                                     {this.handleErrors()}
                                 </div>
 
+                                <div className="session-submit-box">
+                                    <button className="session-submit" onClick={this.handleSubmit}>Sign In </button>
 
-                                <button className="session-submit" onClick={this.handleSubmit}>Sign In </button>
-
-                                
+                                    <button className="demo-submit" onClick={this.handleDemo}>Try Demo</button>
+                                </div>
                             </form>
                         </div>
                     </div>

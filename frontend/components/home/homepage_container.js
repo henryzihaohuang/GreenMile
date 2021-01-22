@@ -1,6 +1,7 @@
 import {connect} from 'react-redux';
 import {logout} from '../../actions/session';
 import Homepage from './homepage';
+import {openModal} from '../../actions/modal';
 
 const mStP = (state, ownProps) => {
     return {
@@ -10,7 +11,8 @@ const mStP = (state, ownProps) => {
 
 const mDtP = (dispatch) => {
     return {
-        action: ()=> dispatch(logout())
+        action: ()=> dispatch(logout()),
+        openModal: (modal) => dispatch(openModal(modal))
     }
 };
 

@@ -1,7 +1,6 @@
 import React from 'react';
 import SignUpContainer from './session/signup_container';
 import LogInContainer from './session/login_container';
-import NavBarContainer from './nav_bar/nav_bar_container';
 import HomepageContainer from './home/homepage_container';
 import PortfolioContainer from './portfolio/portfolio_container';
 import { Route, Switch } from 'react-router-dom';
