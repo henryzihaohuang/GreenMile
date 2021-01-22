@@ -3,8 +3,15 @@ import React from 'react';
 class Portfolio extends React.Component {
     constructor(props){
         super(props)
+
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    handleSubmit(e) {
+        e.preventDefault();
+        this.props.action()
+            .then(() => this.props.history.push('/'));
+    }
 
     render(){
         return(
@@ -13,9 +20,10 @@ class Portfolio extends React.Component {
             
             <h2>Balance: $10000000000 babyyyyy kaching kaching you r rich</h2>
 
-                <img src= "https://upload.wikimedia.org/wikipedia/commons/0/0c/F%28x%29_%3D_x%5E3_%E2%88%92_9x.PNG" />
-
+                <button onClick={this.handleSubmit}>Logout</button>
+    
             </div>
+
         )
     }
 
