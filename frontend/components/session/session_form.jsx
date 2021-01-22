@@ -85,7 +85,7 @@ class SessionForm extends React.Component {
                                     type="text" 
                                     value={this.state.firstName} 
                                     onChange={this.handleInput('firstName')} 
-                                    className=""
+                                    className="firstname-input"
                                     placeholder="First Name"/>
                                 </div>
 
@@ -94,7 +94,7 @@ class SessionForm extends React.Component {
                                     type="text" 
                                     value={this.state.lastName} 
                                     onChange={this.handleInput('lastName')}
-                                    className="" 
+                                    className="lastname-input" 
                                     placeholder="Last Name"/>
                                 </div>
                             </div>
@@ -181,20 +181,20 @@ class SessionForm extends React.Component {
                     <div className="session-img-frame">
                         <img className="session-img" alt="session-img" src="https://cdn.robinhood.com/assets/generated_assets/632fcb3e7ed928b2a960f3e003d10b44.jpg" />
                     </div>
-                    <div className="form-box">
-                        <div className="form"> 
+                    <div className="login-form-box">
+                        <div className="login-form"> 
                             <div className="form-greeting-textbox">
                                 <h3 className="form-greeting">Welcome to GreenMile</h3>
                             </div>
 
                             
 
-                            <form className="form-area">
+                            <form className="login-form-area">
                                 
                                 <div className="label">
                                     <label className="login-form-email-entry">Email:</label>
                                 </div>
-                                <div className="input">
+                                <div className="login-input">
                                     <input
                                         type="text"
                                         value={this.state.email}
@@ -207,7 +207,7 @@ class SessionForm extends React.Component {
                                 <div className="label">
                                     <label className="label-text">Password:</label>
                                 </div>
-                                <div className="input">
+                                <div className="login-input">
                                     <input
                                         type="password"
                                         value={this.state.password}
