@@ -1,92 +1,118 @@
-.login-page {
+.login-wrapper {
     font-family: 'Robot', sans-serif;
-    font-size: 22px;
-
     width: 100%;
     height: 100%;
-
     display: flex;
     flex-direction: row;
-
 }
 
-.session-img-frame {
+.login-img-wrapper {
     width: 50%;
 }
 
-.session-img {
+.login-form-block{
+    font-family:'DMSans', sans-serif;
+    height: 80%;
+    width:80%;
+}
+
+.login-img-element {
     width: 100%;
     height: 100%;
 }
 
-.login-form-box {
-    margin-top:90px;
-    width: 50%;
-
-}
-
-.login-form-area {
+.login-form-wrapper {
     display:flex;
-    flex-direction: column;
-    width: 400px;
-    height: 400px;
-    margin-left: 58px;
+    justify-content: left;
+    align-items: center;
+    margin-top:90px;
+    margin-left:48px;
+    width: 50%;
 }
 
-.form-greeting-textbox {
-    font-size: 20px;
-    margin-left: 58px;
-    padding-bottom: 22px;
-}
-
-
-.label {
-    font-size: 13px;
-    width: 100%;
-    padding-bottom: 18px;
-    padding-top: 18px;
+.login-form-greeting-element {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 16px;
     
 }
 
+.login-inputs-wrapper {
+    display:flex;
+    flex-direction: column;
+    width:388px;
+}
 
+.login-input-label {
+    font-size: 11px;
+    width: 100%;
+    padding-bottom: 18px;
+    padding-top: 18px;
+}
 
-
-.login-input{
+.login-input-element{
     outline: none;
+    border: 1px solid grey;
     border-radius: 4px;
-    width: 373px;
-    height: 33px;
-    padding-left: 12px;
-    padding-right: 12px;
-    text-indent: 10px;
+    width: 320px;
+    height: 29px;
+    text-indent: 8px;
 
 }
 
-.login-input:hover {
-    border-color: #00C810;
+.login-input-element:hover {
+    border-color: #a2a8ad;
     transition: all 1s ease;
     -webkit-transition: all 1s ease;
 }
 
+.login-input-element:focus {
+    border-color: #00C810;
+    outline:none;
+}
+
 .error-messages {
-    font-size: 13px;
+    font-size: 11px;
     font-weight: bold;
     margin-top: 25px;
 }
 
 .forgot-password{
-    font-size: 13px;
+    font-size: 11.5px;
+    font-weight:900px;
+    line-height: 13px;
     color:#47c807;
     width: 300px;
     margin-top: 16px;
 }
 
-.session-submit-box {
-    width:100%;
+.login-button-block {
+    width:300px;
     display:flex;
     justify-content: space-between;
 
 }
+
+.login-button-submit {
+    width: 125px;
+    height: 45px;
+    margin-top: 88px;
+
+    border: none;
+    background-color: #00C810;
+    border-radius: 4px;
+    
+    text-align: center;
+    color: white;
+
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.login-button-submit:hover {
+    background-color: rgba(0,160,4,1)
+}
+
 .demo-submit {
     width: 125px;
     height: 45px;
@@ -101,26 +127,6 @@
 
     font-weight: bold;
     font-size: 12px;
-}
-
-.session-submit {
-    width: 125px;
-    height: 45px;
-    margin-top: 88px;
-
-    border: none;
-    background-color: #00C810;
-    border-radius: 4px;
-    
-    text-align: center;
-    color: white;
-
-    font-weight: bold;
-    font-size: 12px;
-}
-
-.session-submit:hover {
-    background-color: rgba(0,160,4,1)
 }
 
 .error-reveal {

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { signup } from '../../actions/session';
+import { signup, receiveErrors } from '../../actions/session';
 import SessionForm from './session_form';
 
 const mStP = (state, ownProps) => {
@@ -21,7 +21,8 @@ const mStP = (state, ownProps) => {
 };
 
 const mDtP = dispatch => ({
-    action: formUser => dispatch(signup(formUser))
+    action: formUser => dispatch(signup(formUser)),
+    clearErrors: (errors) => dispatch(receiveErrors(errors))
 });
 
 export default connect(mStP, mDtP)(SessionForm);

@@ -1,3 +1,7 @@
+.homepage-wrapper {
+
+}
+
 .nav-bar {
     position:absolute;
     width:100%;
@@ -119,7 +123,7 @@ a {
     background-color: #343536;
 }
 
-.disclosure-textbox {
+.modal-page-wrapper{
     width:248px;
     font-size: 15px;
     padding-top: 40px;
@@ -129,8 +133,9 @@ a {
     align-items: center;
 }
 
-.disclosure-textbox:hover {
+.disclosure-text-element:hover {
     color: #2fc802;
+    cursor: pointer;
 }
 
 .info-img {

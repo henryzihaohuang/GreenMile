@@ -19,7 +19,7 @@ const logoutCurrentUser = () => ({
     type: LOGOUT_CURRENT_USER
 })
 
-const receiveErrors = errors => {
+export const receiveErrors = errors => {
     // debugger
     return {
             type: RECEIVE_ERRORS,

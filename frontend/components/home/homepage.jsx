@@ -9,7 +9,7 @@ class Homepage extends React.Component {
 
     render(){
             return (
-            <div>
+            <div className="homepage-wrapper">
                 <div className="nav-bar">
 
                     <div className="green-mile-textbox">
@@ -32,36 +32,27 @@ class Homepage extends React.Component {
 
                     </div>
                 </div>
-
                 <div className="homepage">
-                    
                         <div className="content-box">
-
-
                             <div className="header-textbox">
-
-                    
-
                                 <h1 className="header">Investing for Everyone</h1>
-
                                 <p className="body">Commission-free investing, plus the tools you need to put your money in motion. Sign up and get your first stock for free. Certain limitations apply.</p>
-
-
                                 <button className="body-signup-button">
                                     <Link to='/signup'><span>Sign up</span></Link>
                                 </button>
 
-                                
 
-                                <div className="disclosure-textbox" onClick={() => this.props.openModal('disclosure')}>
-                            
-                                        <div className="info-img"><img  src={window.infoURL} /> </div>
-                                        <div className="disclosure-text"><h4>Free Stock Disclosure</h4></div>
+
+                                <div className="modal-page-wrapper" >
+                                        <div className="info-img">
+                                            <img  src={window.infoURL} /> 
+                                        </div>
+
+                                    <div onClick={() => this.props.openModal('disclosure')} >
+                                        <h4 className="disclosure-text-element">Free Stock Disclosure</h4>
+                                    </div>
                             
                                 </div>
-                                
-
-                                
                             </div>
                             <div className="image-box">
                                 <img className="cellphone-img" src="https://cdn.robinhood.com/assets/robinhood/brand/_next/static/images/1x__5a49de3493cf5f77132e35fab7a8c781.png" />
@@ -70,6 +61,12 @@ class Homepage extends React.Component {
                         </div>
                     
                 </div>
+                <div className="footer-wrapper">
+                
+
+
+                </div>
+            
             </div>
         )
     }

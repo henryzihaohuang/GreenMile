@@ -1,4 +1,4 @@
-.signup-page {
+.signup-wrapper {
     font-family: 'Robot', sans-serif;
     width: 100%;
     height: 690px;
@@ -6,72 +6,79 @@
     flex-direction: row;
 }
 
-.form-area {
+.signup-link {
+    text-decoration: none;
+    color:#00C810;
+    cursor:pointer;
+}
+
+.signup-form-wrapper {
     width: 60%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-left:40px;
 }
 
-.form-box {
+.signup-form-block {
     width:70%;
 }
 
-.logo-textbox {
-    width: 100%;
-    margin-top:41px;
-    font-size: 24px;
-}
-
-.form-greeting-box{
-    margin-top:-10px;
+.signup-greeting-block{
+    margin-top: 10px;
     font-size: 18px; 
-    width:200px;
-    height:200px;
+    width: 100%;
+    height: 100px;
     display:flex;
     flex-direction: column;
     // height: 40px;
 }
 
-.form-greeting span{
+.signup-logo-element {
+    // width: 100%;
+    font-size: 24px;
+}
+
+.signup-logo-img{
+    width:42px;
+    height:42px;
+}
+
+.signup-greeting-element span{
     font-size: 22px;
 }
 
-.form-greeting2 span{
+.signup-greeting-element-2 span{
     font-size: 13px;
 }
 
-.first-last-inputs {
+.first-last-inputs-block {
     display:flex;
     flex-direction: row;
     justify-content: space-between;
-
-
 }
 
 .firstname-input, .lastname-input {
     height: 33px;
     width: 45%;
-
 }
 
-.firstname-input input{
+.firstname-input-element, .lastname-input-element{
     width: 100%;
     padding:0;
     height: 33px;
-
+    background-color: #f5f8fa;
+    border:none;
+    border-radius: 4px;
+    text-indent: 10px;
 }
 
-.lastname-input input{
-    width: 100%;
-    padding:0;
-    height: 33px;
-}
+.input-textbox, {
+    background-color: #f5f8fa;
+    border:none;
+    margin-top:16px;
 
-.input-textbox{
     outline: none;
     border-radius: 4px;
     width: 373px;
@@ -79,6 +86,16 @@
     padding-left: 12px;
     padding-right: 12px;
     text-indent: 10px;
+}
+
+.input-textbox:hover {
+    border-color: #00C810;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+}
+
+::placeholder{
+    color:#b4bdc2;
 }
 
 .email-password {
@@ -99,25 +116,26 @@
     -webkit-transition: all 1s ease;
 }
 
-.form-area{
-    width: 70%;
-    font-size:13px;
-    display: flex;
-    justify-content:left;
-    flex-direction:column;
+
+.signup-button-block{
+    margin-bottom: 80px;
+}
+.signup-button-submit {
+    width: 125px;
+    height: 45px;
+    
+
+    border: none;
+    background-color: #00C810;
+    border-radius: 4px;
+    
+    text-align: center;
+    color: white;
+
+    font-weight: bold;
+    font-size: 12px;
 }
 
-.input-textbox {
-    background-color: #f5f8fa;
-    border:none;
-    margin-top:16px;
-}
-
-.input-textbox:hover {
-    border-color: #00C810;
-    transition: all 1s ease;
-    -webkit-transition: all 1s ease;
-}
 
 .form-disclosure {
     font-size:13px;
@@ -126,6 +144,16 @@
     align-items: center;
 }
 
+
+.footer-wrapper {
+    font-size:12px;
+}
+
+.signup-footer-block {
+    color:lightgrey;
+    line-height: 14px;
+
+}
 
 .sidebar-text-title{
     font-weight: bold;
@@ -166,13 +194,4 @@
 
 .sidebar-text p{
     font-weight: 100;
-}
-
-.footer-box {
-    font-size:13px;
-}
-
-.footer-box {
-    color:lightgrey;
-
 }

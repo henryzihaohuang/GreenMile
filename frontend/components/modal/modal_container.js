@@ -1,16 +1,16 @@
 import Modal from './modal';
-import { closeModal } from '../actions/modal_actions';
+import { closeModal } from '../../actions/modal';
 import { connect } from 'react-redux';
 
 const mStP = (state, ownProps) => {
-    // debugger
+    debugger
     return {
         modal: state.ui.modal
     };
 };
 
 const mDtP = dispatch => {
-    // debugger
+    debugger
     return {
         closeModal: () => dispatch(closeModal())
     };

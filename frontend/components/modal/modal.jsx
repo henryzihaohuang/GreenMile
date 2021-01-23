@@ -1,17 +1,27 @@
 import React from 'react';
-import {closeModal} from '../../actions/modal';
-import DisclosureContainer from '../disclosure/disclosure_container';
+import DisclosureContainer from '../disclosure/disclosure';
 
-Modal(modal) = () => {
-
+const Modal= ({modal, closeModal}) => {
+    if (!modal){
+        return null
+    }
     let disclosureModal;
     
-    modal = 'disclosure' ? disclosureModal = <DisclosureContainer /> : null
+    switch(modal){
+        case 'disclosure':
+            debugger
+            disclosureModal = <DisclosureContainer />
+            break;
+        default:
+            return null;
+    }
 
     return (
-        <div className="modal-backdrop" onClick={closeModal}>
-            <div className="modal" onClick={(e => e.stopPropogation())} >
-                {disclosureModal}
+        <div className="modal-background-wrapper" onClick={closeModal}>
+            <div className="modal-block" onClick={(e => e.stopPropogation())} >
+                <div className="modal-element">
+                    {disclosureModal}
+                </div>
             </div>
         </div>
     );

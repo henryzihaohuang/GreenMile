@@ -3,14 +3,16 @@ import SignUpContainer from './session/signup_container';
 import LogInContainer from './session/login_container';
 import HomepageContainer from './home/homepage_container';
 import PortfolioContainer from './portfolio/portfolio_container';
-import { Route, Switch } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../utils/route_utils';
+import ModalContainer from '../components/modal/modal_container';
 
 // To Do: ProtectedRoute still needs to be written for portfolio/stocks
 
 const App = ({state}) => {
     return (
         <div>
+                <ModalContainer />
                 <Route exact path="/" component={HomepageContainer} />
                 <AuthRoute exact path="/login" component={LogInContainer} />
                 <AuthRoute exact path="/signup" component={SignUpContainer} />
