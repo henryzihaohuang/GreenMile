@@ -26,7 +26,7 @@
     font-size:32px;
 }
 
-.nav-bar-elements ul{
+.portfolio-nav-bar-block ul{
     width: 100%;
     font-size:14px;
     display:flex;
@@ -51,8 +51,6 @@
     // outline:lightgrey;
     border-radius: 4px;
     text-indent: 34px;
-    
-
 }
 
 .searchbar-element:hover {
@@ -69,47 +67,121 @@
 ul{
     list-style-type: none;
 }
-.nav-bar-links{
+
+.portfolio-nav-bar-element-wip{
+    margin-left: 20px;
+}
+
+.portfolio-nav-bar-element{
+    color:white;
     margin-left: 20px;
     cursor:pointer;
 }
 
-.nav-bar-links:hover{
+.portfolio-nav-bar-element:hover{
     color:#00C810;
 }
 
-.nav-bar-links:focus{
+.nav-bar-element:focus{
     border-bottom-color:#00C810;
 }
-// .balance-statement {
-//     font-size: 22px;
-// }
-
-// .placeholder-img{
-//     width: 500px;
-//     height:400px;
-// }
 
 //main block
 
-.portfolio-main-block {
-    border:1px solid white;
+.portfolio-main-block{
+    margin-left: -250px;
+}
+
+.portfolio-graph-block {
     padding:30px;
-    width:70%;
+    width:700px;
     flex-direction:column;
-    justify-content: flex-start;align-items: center;
+    justify-content: flex-start;
+    align-items: space-around;
     border-bottom-color: grey;
+    margin-left:-40px;
 
 
 }
 
 .portfolio-buying-power-block {
-    border:1px solid white;
+
     padding:30px;
-    width:70%;
+    width:700px;
     flex-direction:column;
     justify-content: flex-start;align-items: center;
     border-bottom-color: grey;
-
-
+    margin-left:-40px;
 }
+
+.balance-element {
+    
+    font-size: 33px;
+}
+
+.graph-img {
+
+    height: 100%;
+    width:680px;
+    float: left;
+    overflow: hidden;
+    animation: reveal 4s ease;
+    animation-fill-mode: backwards;
+}
+
+@-webkit-keyframes reveal {
+    from {
+        width: 0px;
+    }
+    to { 
+        width: 100%;
+    }
+}
+@keyframes reveal {
+    from {
+        width: 0px;}
+    to { width: 100%;
+    }
+}
+
+.time-bar-block ul{
+    grid-column-start: 1;
+    width: 233px;
+    font-size:14px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    align-items: space-between;
+    color: white;
+    font-weight: bold;
+}
+
+.time-bar-elements:hover{
+    color:#00C810;
+    cursor:pointer;
+}
+
+.today-afterhours-text-element{
+    color:grey;
+    font-weight: 400;
+}
+
+.time-bar-elements:focus{
+    border-bottom: 3px solid #00C810;
+}
+
+.portfolio-buying-power-block{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.buying-power{
+    justify-content: flex-start;
+}
+.balance{
+    justify-content: flex-end;
+}
+
+

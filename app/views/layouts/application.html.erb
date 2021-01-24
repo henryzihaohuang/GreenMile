@@ -20,9 +20,16 @@
     </script>
 
     <script type="text/javascript">
+      window.splashURL = "<%= image_url('homepage-img.png') %>";
+    </script>
+
+    <script type="text/javascript">
       window.infoURL = "<%= image_url('info-img.png') %>";
     </script>
 
+    <script type="text/javascript">
+      window.graphURL = "<%= image_url('graph-img.png') %>";
+    </script>
 
     <%= favicon_link_tag asset_path('forest-badge.png') %>
     <% if current_user %>

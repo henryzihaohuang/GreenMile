@@ -31,47 +31,61 @@ class Portfolio extends React.Component {
                         />
                     </div>
 
-                    <div className="nav-bar-elements">
+                    <div className="portfolio-nav-bar-block">
                         <ul>
-                            <div className="nav-bar-links">
-                                <li>Free Stocks</li>
+                            <div className="portfolio-nav-bar-element">
+                                <a href="https://www.linkedin.com/in/zihaohuang/"><li>LinkedIn</li></a>
                             </div>
-                            <div className="nav-bar-links">
-                                <li>Portfolio</li>
+                            <div className="portfolio-nav-bar-element">
+                                <a href="https://github.com/henryzihaohuang"><li>GitHub</li></a>
                             </div>
-                            <div className="nav-bar-links">
-                                <li>Cash</li>
-                            </div>
-                            <div className="nav-bar-links">
-                                <li>Messages</li>
-                            </div>
-                            <div className="nav-bar-links">
+                            <div className="portfolio-nav-bar-element-wip">
                                 <li>Account</li>
                             </div>
-                            <div className="nav-bar-links">
+                            <div className="portfolio-nav-bar-element">
                                 <li><span onClick={this.handleSubmit}>Logout</span></li>
                             </div>
                         </ul>
                     </div>
                 
                 </div>
-                
                 <div className="portfolio-main-block">
+                <div className="portfolio-graph-block">
                     <div className="portfolio-balance-block">
-                        <div>$10,000</div>
-                        <div>+$30.60 (+2.24%) <span>Today</span> 
+                        <div className="balance-element">$10,000</div>
+                        <div>+$30.60 (+2.24%) <span className="today-afterhours-text-element">Today</span> 
                         </div>
-                        <div>-$0.29 (-0.02%) <span>After Hours</span></div>
+                        <div>-$0.29 (-0.02%) <span className="today-afterhours-text-element">After Hours</span></div>
                         
+
                         <div className="graph-img">
-
+                            <img src={window.graphURL}></img>
                         </div>
-
-                       
-
                         
-
                     </div>
+                    <div className="time-bar-block">
+                        <ul>
+                            <div className="time-bar-elements">
+                                <li>1D</li>
+                            </div>
+                            <div className="time-bar-elements">
+                                <li>1W</li>
+                            </div>
+                            <div className="time-bar-elements">
+                                <li>1M</li>
+                            </div>
+                            <div className="time-bar-elements">
+                                <li>3M</li>
+                            </div>
+                            <div className="time-bar-elements">
+                                <li>1Y</li>
+                            </div>
+                            <div className="time-bar-elements">
+                                <li>ALL</li>
+                            </div>
+                        </ul>
+                    </div>
+
 
                 </div>
                 <div className="portfolio-buying-power-block">
@@ -82,7 +96,7 @@ class Portfolio extends React.Component {
                 </div>
                 
                 <div className="portfolio-sidebar-block"></div>
-            
+                </div>
             </div>
 
         )

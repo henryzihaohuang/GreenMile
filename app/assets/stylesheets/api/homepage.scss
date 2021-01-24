@@ -1,8 +1,6 @@
-.homepage-wrapper {
+//navbar
 
-}
-
-.nav-bar {
+.homepage-nav-bar {
     position:absolute;
     width:98.5%;
     box-shadow: 0px 0.1px 2px 1px rgba(0,0,0,0.4);
@@ -13,22 +11,20 @@
     padding:12px;
 }
 
-a {
+.homepage-links, .login-button, .signup-button-text-element, .body-signup-button,.login-button-text-element  {
     text-decoration: none;
     font-weight: 800;
     color: black;
 }
 
-.green-mile-textbox {
+.green-mile-logo-block {
+
+    font-size: 29px;
     width: 196px;
     margin-left: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.green-mile-text {
-    font-size: 29px;
 }
 
 .logo-img {
@@ -40,20 +36,12 @@ a {
 }
 
 
-.login-button {
-    color: black;
+.signup-button-block {
     font-weight: bold;
-    text-decoration: none;
-    font-size: 16px;
-    
-}
-
-.signup-button {
-    font-weight: bold;
-    width: 127px;
-    height: 43px;
+    width: 142px;
+    height: 49px;
     border: none;
-    font-size: 16px;
+    font-size: 19px;
     font-weight: bold;
     
     border-radius: 30px;
@@ -64,20 +52,37 @@ a {
     
 }
 
-.signup-button:hover {
+.login-button-text-element{
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.signup-button-block:hover,  {
     background-color: #13670d;
 }
 
-.homepage {
+.login-button-text-element:hover {
+    color: #2fc802;
+
+}
+
+
+//first block
+
+.first-section-wrapper {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: start;
     width: 100%;
     height:690px;
     background-color: #c3f53b;
+
+    border-bottom:1px solid black;
 }
 
-.content-box {
-    width: 80%;
+.first-section-block {
+
+    width: 600px;
     height: 100%;
     margin-top: 40px;
     display: flex;
@@ -86,47 +91,62 @@ a {
     align-items: center;
 }
 
-.header-textbox {
-    width: 475px;
+.first-section-header-block {
     height: 100%;
     padding-left: 40px;
 }
 
-.header {
-    padding-top: 105px;
+.first-section-header {
+    margin-top: 155px;
     padding-bottom: 35px;
-    font-size: 42px;
+    font-size: 52px;
+    font-weight:500;
 }
 
-.body {
+.first-section-body {
+
     padding-bottom: 45px;
     font-size: 22px;
     line-height: 36px;
+    width:486px;
 }
 
 .body-signup-button {
     width: 150px;
     height: 49px;
-    border: solid black;
+    border:none;
+    outline:none;
     border-radius: 30px;
     background-color: black;
     font-size: 16px;
     cursor: pointer;
 }
 
-.body-signup-button span {
+.body-signup-button  {
     font-weight:bold;
     color:white;
+    
+}
+
+.body-signup-button-text{
+    font-weight:bold;
+    color:white;
+    text-decoration: none;
 }
 
 .body-signup-button:hover {
     background-color: #343536;
 }
 
+.image-box{
+    width: 587px;
+    height:576px;
+    margin-top: 40px;
+}
 .modal-page-wrapper{
     width:248px;
-    font-size: 15px;
-    padding-top: 40px;
+    font-size: 17px;
+    margin-top:16px;
     font-weight: bold;
     display: flex;
     flex-direction: row;
@@ -134,6 +154,7 @@ a {
 }
 
 .disclosure-text-element:hover {
+    
     color: #2fc802;
     cursor: pointer;
 }
