@@ -3,7 +3,7 @@ import { closeModal } from '../../actions/modal';
 import { connect } from 'react-redux';
 
 const mStP = (state, ownProps) => {
-    debugger
+    // debugger
     return {
         modal: state.ui.modal
     };

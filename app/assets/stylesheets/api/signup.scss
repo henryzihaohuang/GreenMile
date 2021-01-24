@@ -23,7 +23,7 @@
 
 .signup-form-block {
     width:70%;
-    margin-top:40px;
+    margin-top:20px;
 }
 
 .signup-greeting-block{
@@ -36,9 +36,11 @@
     // height: 40px;
 }
 
-.signup-logo-element {
+.signup-logo-text {
     // width: 100%;
     font-size: 24px;
+    text-decoration:none;
+    color:black;
 }
 
 .signup-logo-img{
@@ -78,7 +80,7 @@
 .input-textbox, {
     background-color: #f5f8fa;
     border:none;
-    margin-top:19px;
+    margin-top:22px;
 
     outline: none;
     border-radius: 4px;
@@ -121,7 +123,10 @@
 
 .signup-button-block{
     margin-bottom: 80px;
+    display:flex;
+    flex-direction: row;
 }
+
 .signup-button-submit {
     width: 136px;
     height: 45px;
@@ -138,6 +143,26 @@
     font-size: 12px;
 }
 
+.already-have-acct{
+    width: 60%;
+    font-size: 12px;
+    line-height: 13px;
+    color:black;
+    width: 300px;
+    margin-left:20px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.login-link{
+    font-size: 12px;
+    line-height: 13px;
+    color:#47c807;
+    width: 300px;
+    cursor: pointer;
+    text-decoration: none;
+}
 
 .form-disclosure {
     font-size:13px;
@@ -147,7 +172,7 @@
 }
 
 
-.footer-wrapper {
+.signup-footer-wrapper {
     font-size:12px;
     width: 88%;
     margin-left: 12px;

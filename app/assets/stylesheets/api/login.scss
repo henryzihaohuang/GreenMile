@@ -81,15 +81,21 @@
     font-size: 11.5px;
     font-weight:900px;
     line-height: 13px;
-    color:#47c807;
+    color:black;
     width: 300px;
     margin-top: 16px;
+}
+
+.forgot-password-green{
+    color:#47c807;
+    text-decoration:none;
 }
 
 .login-button-block {
     width:300px;
     display:flex;
     justify-content: space-between;
+    align-items: center;
 
 }
 
@@ -114,19 +120,15 @@
 }
 
 .demo-submit {
-    width: 125px;
-    height: 45px;
     margin-top: 88px;
-
-    border: none;
-    background-color: #00C810;
-    border-radius: 4px;
-    
-    text-align: center;
-    color: white;
-
-    font-weight: bold;
-    font-size: 12px;
+    margin-left:16px;
+    font-size: 11px;
+    font-weight:900px;
+    line-height: 13px;
+    color:#47c807;
+    width: 300px;
+    cursor: pointer;
+    font-weight:bold;
 }
 
 .error-reveal {

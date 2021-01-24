@@ -19,13 +19,13 @@ class Homepage extends React.Component {
                             </a>
                     </div> 
         
-                    <div className="signup-login-block">
-                        <span className="login-button">
-                                <Link className="login-button-text-element"to='/login'>Log In</Link>
+                    <div className="homepage-signup-login-block">
+                        <span className="homepage-login-button">
+                                <Link className="homepage-login-button-text-element" to="/login">Log In</Link>
                         </span>
 
-                        <button className="signup-button-block">
-                                <Link to='/signup' className="signup-button-text-element">Sign up</Link>
+                        <button className="homepage-signup-button-block">
+                                <Link className="homepage-signup-button-text-element" to="/signup" >Sign up</Link>
                         </button>
 
                     </div>
@@ -57,20 +57,51 @@ class Homepage extends React.Component {
                         </div>
                         <div className="image-box">
                             <img className="cellphone-img" src={window.splashURL} />
+
+                            {/* <video src="https://cdn.robinhood.com/assets/robinhood/brand/_next/static/images/3x__327bf4cc768a323497d5aaa7416319c2.mp4" autoplay="" controlslist="nodownload nofullscreen noremoteplayback" loop="" muted="" playsinline="" preload="auto" >
+            
+                            </video> */}
                         </div>
+
                     
                 </div>
-                <div className="footer-wrapper">
-                    <div className="footer-block">
+                <div className="portfolio-footer-wrapper">
+                    <div className="portfolio-footer-block">
+                            <div className="portfolio-footer-border" ><br /></div>
                             <div>
-                                <p>© 2021 Robinhood. All rights reserved.
-                            Robinhood means Robinhood Markets and its in-application and web experiences with its family of wholly owned subsidiaries which includes Robinhood Financial, Robinhood Securities, and Robinhood Crypto.</p>
+                                <p>
+                                    © 2021 GreenMile. No rights reserved.
+                                    <br />
+                                </p>
                             </div>
                             <div>
-                                <p>All investments involve risks, including the possible loss of capital.</p>
+                                <p>
+                                    GreenMile means GreenMile Markets and its in-application and web experiences with its family of wholly owned subsidiaries which includes GreenMile Financial, GreenMile Securities, and GreenMile Crypto.
+                                </p>
+                                <br />
                             </div>
                             <div>
-                                <p>Securities trading is offered to self-directed customers by Robinhood Financial. Robinhood Financial is a member of the <a href="https://www.finra.org/">Financial Industry Regulatory Authority (FINRA)</a>.</p>
+                                <p>
+                                    All investments involve risks, including the possible loss of capital. But think of the money you could make!
+                                </p>
+                                <br />
+                            </div>
+                            <div>
+                                <p>
+                                    Securities trading is not really offered to self-directed customers by GreenMile Financial. GreenMile Financial is also not a member of the <a className="finra-link" href="https://www.finra.org/">Financial Industry Regulatory Authority (FINRA)</a>.
+                                </p>
+                                <br />
+                            </div>
+
+                            <div className="footer-modal-page-wrapper" >
+                                <div className="info-img">
+                                    <img src={window.blackinfoURL} />
+                                </div>
+
+                                <div onClick={() => this.props.openModal('disclosure')} >
+                                    <h4 className="view-important-text-element">View Important Disclosure</h4>
+                                </div>
+
                             </div>
                     </div>
 

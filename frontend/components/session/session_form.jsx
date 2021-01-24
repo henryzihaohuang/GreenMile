@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -67,7 +68,7 @@ class SessionForm extends React.Component {
                             
                         <div className="signup-greeting-block">
                                 <div className="signup-logo-element">
-                                    <a href="/"> GreenMile </a>
+                                    <a className="signup-logo-text" href="/"> GreenMile </a>
 
                                     <a href="/"><img className="signup-logo-img" src={window.logoURL} />
                                     </a>
@@ -116,7 +117,7 @@ class SessionForm extends React.Component {
                                     value={this.state.password} 
                                     onChange={this.handleInput('password')}
                                     className="input-textbox" 
-                                    placeholder="Password"/>
+                                    placeholder="Password (min. 10 characters)"/>
                                 </div>
                             </div>
 
@@ -126,9 +127,16 @@ class SessionForm extends React.Component {
 
                             <div className="signup-button-block">
                                 <button className="signup-button-submit" onClick={this.handleSubmit}>Continue</button>
+
+                                <div className="already-have-acct">
+                                    <div>
+                                        Already have an account? 
+                                    </div>
+                                        <p><Link className="login-link" to="/login">Go ahead and sign in.</Link></p>
+                                </div>
                             </div>
 
-                            <div className="footer-wrapper">
+                            <div className="signup-footer-wrapper">
                                 <div className="signup-footer-block">
                                     <div>
                                         <p>All investments involve risk, including the possible loss of principal. Investors should consider their investment objectives and risks carefully before investing.</p>
@@ -215,7 +223,7 @@ class SessionForm extends React.Component {
                                         <input type="password" value={this.state.password} onChange={this.handleInput('password')} className="login-input-element"/>
                                     </div>
                                 <div className="forgot-password">
-                                    <p>Forgot your username or password? Try our demo account!</p>
+                                    <p>Don't have an account? <Link className="forgot-password-green" to="/signup">Make a new one.</Link></p>
                                 </div>
                             
                                 <div className="error-messages">
@@ -225,7 +233,7 @@ class SessionForm extends React.Component {
                                 <div className="login-button-block">
                                     <button className="login-button-submit" onClick={this.handleSubmit}>Sign In </button>
 
-                                    <button className="demo-submit" onClick={this.handleDemo}>Try Demo</button>
+                                    <span className="demo-submit" onClick={this.handleDemo}>Try Demo</span>
                                 </div>
                             </form>
                         </div>
