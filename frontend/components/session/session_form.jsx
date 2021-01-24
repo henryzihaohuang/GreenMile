@@ -135,7 +135,7 @@ class SessionForm extends React.Component {
                                         <br />
                                     </div>
                                     <div>
-                                        <p>Commission-free trading means $0 commission trading on self-directed individual cash or margin brokerage accounts that trade U.S. listed securities via mobile devices or web. Keep in mind, other fees such as trading (non-commission) fees, Gold subscription fees, wire transfer fees, and paper statement fees may apply to your brokerage account. Please see GreenMile Financial’s <a className="signup-link" src="https://cdn.robinhood.com/assets/robinhood/legal/RHF%20Fee%20Schedule.pdf">fee schedule</a> to learn more.
+                                        <p>Commission-free trading means $0 commission trading on self-directed individual cash or margin brokerage accounts that trade U.S. listed securities via mobile devices or web. Keep in mind, other fees such as trading (non-commission) fees, Gold subscription fees, wire transfer fees, and paper statement fees may apply to your brokerage account. Please see GreenMile Financial’s <a className="signup-link" href="https://cdn.robinhood.com/assets/robinhood/legal/RHF%20Fee%20Schedule.pdf">fee schedule</a> to learn more.
                                         </p>
                                         <br />
                                     </div>
@@ -145,8 +145,8 @@ class SessionForm extends React.Component {
                                         <br />
                                     </div>
                                     <div>
-                                        <p><a className="signup-link" src="https://brokercheck.finra.org/">Check the background of GreenMile Financial LLC and GreenMile Securities, LLC on FINRA’s BrokerCheck.</a>
-                                            </p>
+                                        <p><a className="signup-link" href="https://brokercheck.finra.org/">Check the background of GreenMile Financial LLC and GreenMile Securities, LLC on FINRA’s BrokerCheck.</a>
+                                        </p>
                                         <br />
                                         <p>© 2020 GreenMile. All rights definitely not reserved.</p>
                                     </div>
@@ -164,13 +164,15 @@ class SessionForm extends React.Component {
                                 <div>
                                     <h6 className="sidebar-text-title">Commission-free trading</h6>
                                     <br />
-                                    <p>Break free from commission-fees and make unlimited commission-free trades in stocks, funds, and options with Robinhood Financial. Other fees may apply. View our <a className="signup-link" src="https://cdn.robinhood.com/assets/robinhood/legal/RHF%20Fee%20Schedule.pdf">fee schedule</a> to learn more.</p>
+                                    <p>Break free from commission-fees and make unlimited commission-free trades in stocks, funds, and options with Robinhood Financial. Other fees may apply. View our <a className="signup-link" href="https://cdn.robinhood.com/assets/robinhood/legal/RHF%20Fee%20Schedule.pdf">fee schedule</a> to learn more.</p>
+                                    <br />
                                 </div>
                                 <br />
                                 <div>
                                     <h6 className="sidebar-text-title">Account Protection</h6>
                                     <br />
-                                    <p>Robinhood Financial is a member of SIPC. Securities in your account protected up to $500,000. For details, please see <a className="signup-link" src="https://www.sipc.org/">www.sipc.org.</a></p>
+                                    <p>Robinhood Financial is a member of SIPC. Securities in your account protected up to $500,000. For details, please see <a className="signup-link" href="https://www.sipc.org/">www.sipc.org.</a></p>
+                                    <br />
                                 </div>
                                 <br />
                                 <div>

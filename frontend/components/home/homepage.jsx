@@ -18,8 +18,6 @@ class Homepage extends React.Component {
                             <a href="/"><img className="logo-img" src={window.logoURL} />
                             </a>
                     </div> 
-
-                    
         
                     <div className="signup-login-box">
                         <span className="login-button">
