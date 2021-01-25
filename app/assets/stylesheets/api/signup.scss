@@ -73,7 +73,7 @@
     width: 47%;
 }
 
-.firstname-input-element, .lastname-input-element{
+.name-input-element, {
     width: 100%;
     padding:0;
     height: 33px;
@@ -83,7 +83,8 @@
     text-indent: 10px;
 }
 
-.input-textbox, {
+
+.input-textbox {
     background-color: #f5f8fa;
     border:none;
     margin-top:28px;
@@ -95,12 +96,6 @@
     padding-left: 12px;
     padding-right: 12px;
     text-indent: 11px;
-}
-
-.input-textbox:hover {
-    border-color: #00C810;
-    transition: all 1s ease;
-    -webkit-transition: all 1s ease;
 }
 
 ::placeholder{
@@ -120,10 +115,16 @@
     padding:0px;
 }
 
-.form-input:hover {
-    border-color: #00C810;
-    transition: all 1s ease;
-    -webkit-transition: all 1s ease;
+
+.name-input-element:hover, .input-textbox:hover {
+    background-color: white;
+    border:1px solid #b4bdc2;
+}
+
+.name-input-element:focus, .input-textbox:focus {
+    border: 1px solid #00C810;
+    background-color: white;
+    outline:none;
 }
 
 
