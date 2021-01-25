@@ -20,7 +20,7 @@ class Portfolio extends React.Component {
                 <div className="portfolio-nav-bar">
 
                     <div>
-                        <a><img className="logo-img" src={window.logoURL} /></a>
+                        <a href="/"><img className="logo-img" src={window.logoURL} /></a>
                     </div>
 
                     <div className="searchbar-block">

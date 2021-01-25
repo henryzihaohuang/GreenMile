@@ -22,19 +22,24 @@ class SessionForm extends React.Component {
         // debugger
         return (e) => {
             this.setState({ [field]: e.target.value });
+            this.props.clearErrors([])
         }
     };
 
+    componentWillUnmount() {
+        this.props.clearErrors([])
+    }
+
     handleErrors() {
 
-        const errorClass = this.props.errors.length > 0 ? "error-reveal" : "error-hidden";
+        const errorClass = this.props.errors.length > 0 ? "error-revealed" : "error-hidden";
         // debugger
-        return(
-            <ul className = {errorClass}>
-                {this.props.errors.map((error, i)=>{
-                    return(
+        return (
+            <ul className={errorClass}>
+                {this.props.errors.map((error, i) => {
+                    return (
                         <div>
-                         <img className="session-error-img" src={window.infoURL} /> <li key={`${i}`}>{error}</li>
+                            <li key={`${i}`}>{error}</li>
                         </div>
                     )
                 })}
@@ -42,10 +47,6 @@ class SessionForm extends React.Component {
         )
     };
 
-    componentWillUnmount() {
-
-        this.props.clearErrors([])
-    }
     
     handleDemo(e) {
         this.props.action({ email: "dollyparton@gmail.com", password: "password" })
@@ -66,10 +67,9 @@ class SessionForm extends React.Component {
                     <div className="signup-form-wrapper">
                         <form className="signup-form-block">
                             
-                        <div className="signup-greeting-block">
+                            <div className="signup-logo-block">
                                 <div className="signup-logo-element">
                                     <a className="signup-logo-text" href="/"> GreenMile </a>
-
                                     <a href="/"><img className="signup-logo-img" src={window.logoURL} />
                                     </a>
                                 </div>
@@ -121,9 +121,6 @@ class SessionForm extends React.Component {
                                 </div>
                             </div>
 
-                            <div className="error-messages">
-                                {this.handleErrors()}
-                            </div>
 
                             <div className="signup-button-block">
                                 <button className="signup-button-submit" onClick={this.handleSubmit}>Continue</button>
@@ -132,8 +129,12 @@ class SessionForm extends React.Component {
                                     <div>
                                         Already have an account? 
                                     </div>
-                                        <p><Link className="login-link" to="/login">Go ahead and sign in.</Link></p>
+                                        <p><Link className="login-link" to="/login">Feel free to sign in.</Link></p>
                                 </div>
+                            </div>
+
+                            <div className="signup-error-messages">
+                                {this.handleErrors()}
                             </div>
 
                             <div className="signup-footer-wrapper">
@@ -166,25 +167,25 @@ class SessionForm extends React.Component {
                         
                     </div>
 
-                    <div className="sidebar-box">
-                        <div className="sidebar-content">
-                            <div className="sidebar-text">
+                    <div className="signup-sidebar-wrapper">
+                        <div className="signup-sidebar-block">
+                            <div className="signup-sidebar-text">
                                 <div>
-                                    <h6 className="sidebar-text-title">Commission-free trading</h6>
+                                    <h6 className="signup-sidebar-text-title">Commission-free trading</h6>
                                     <br />
                                     <p>Break free from commission-fees and make unlimited commission-free trades in stocks, funds, and options with Robinhood Financial. Other fees may apply. View our <a className="signup-link" href="https://cdn.robinhood.com/assets/robinhood/legal/RHF%20Fee%20Schedule.pdf">fee schedule</a> to learn more.</p>
                                     <br />
                                 </div>
                                 <br />
                                 <div>
-                                    <h6 className="sidebar-text-title">Account Protection</h6>
+                                    <h6 className="signup-sidebar-text-title">Account Protection</h6>
                                     <br />
                                     <p>Robinhood Financial is a member of SIPC. Securities in your account protected up to $500,000. For details, please see <a className="signup-link" href="https://www.sipc.org/">www.sipc.org.</a></p>
                                     <br />
                                 </div>
                                 <br />
                                 <div>
-                                    <h6 className="sidebar-text-title">Stay on top of your portfolio</h6>
+                                    <h6 className="signup-sidebar-text-title">Stay on top of your portfolio</h6>
                                     <br />
                                     <p>Set up customized news and notifications to stay on top of your assets as casually or as relentlessly as you like. Controlling the flow of info is up to you.</p>
                                 </div>
@@ -226,7 +227,7 @@ class SessionForm extends React.Component {
                                     <p>Don't have an account? <Link className="forgot-password-green" to="/signup">Make a new one.</Link></p>
                                 </div>
                             
-                                <div className="error-messages">
+                                <div className="login-error-messages">
                                     {this.handleErrors()}
                                 </div>
 

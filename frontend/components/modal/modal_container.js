@@ -10,7 +10,7 @@ const mStP = (state, ownProps) => {
 };
 
 const mDtP = dispatch => {
-    debugger
+    // debugger
     return {
         closeModal: () => dispatch(closeModal())
     };

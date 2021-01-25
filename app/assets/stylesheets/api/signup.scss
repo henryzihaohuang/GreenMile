@@ -1,7 +1,7 @@
 .signup-wrapper {
     font-family: 'Robot', sans-serif;
     width: 100%;
-    height: 690px;
+    height: 960px;
     display: flex;
     flex-direction: row;
 }
@@ -27,13 +27,19 @@
 }
 
 .signup-greeting-block{
-    margin-top: 10px;
+    margin-top: 80px;
     font-size: 18px; 
     width: 100%;
     height: 100px;
     display:flex;
     flex-direction: column;
     // height: 40px;
+}
+
+.signup-logo-block {
+    display:flex;
+    align-items: center;
+    margin-top:24px;
 }
 
 .signup-logo-text {
@@ -44,8 +50,8 @@
 }
 
 .signup-logo-img{
-    width:28px;
-    height:28px;
+    width:26px;
+    height:26px;
 }
 
 .signup-greeting-element span{
@@ -53,7 +59,7 @@
 }
 
 .signup-greeting-element-2 span{
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .first-last-inputs-block {
@@ -64,7 +70,7 @@
 
 .firstname-input, .lastname-input {
     height: 33px;
-    width: 45%;
+    width: 47%;
 }
 
 .firstname-input-element, .lastname-input-element{
@@ -80,7 +86,7 @@
 .input-textbox, {
     background-color: #f5f8fa;
     border:none;
-    margin-top:22px;
+    margin-top:28px;
 
     outline: none;
     border-radius: 4px;
@@ -99,7 +105,7 @@
 
 ::placeholder{
     color:#b4bdc2;
-    font-size:12.5px;
+    font-size:12px;
 }
 
 .email-password {
@@ -122,14 +128,14 @@
 
 
 .signup-button-block{
-    margin-bottom: 80px;
+    margin-top:40px;
     display:flex;
     flex-direction: row;
 }
 
 .signup-button-submit {
-    width: 136px;
-    height: 45px;
+    width: 152px;
+    height: 48px;
     
 
     border: none;
@@ -145,7 +151,7 @@
 
 .already-have-acct{
     width: 60%;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 13px;
     color:black;
     width: 300px;
@@ -156,7 +162,7 @@
 }
 
 .login-link{
-    font-size: 12px;
+    font-size: 13px;
     line-height: 13px;
     color:#47c807;
     width: 300px;
@@ -173,54 +179,66 @@
 
 
 .signup-footer-wrapper {
-    font-size:12px;
-    width: 88%;
+
+    margin-top: 80px;
+    font-weight:500;
+    
+    width: 97%;
     margin-left: 12px;
 }
 
 .signup-footer-block {
-    color:lightgrey;
-    line-height: 14px;
+    font-size:12px;
+    color:#b4bdc2;
+    line-height: 18px;
 
 }
 
-.sidebar-text-title{
+//sidebar
+
+.signup-sidebar-text-title{
     font-weight: bold;
 }
 
-
-.sidebar-box{
-    
+.signup-sidebar-wrapper {
     width: 40%;
     height: 100%;
     display:flex;
     flex-direction: column;
     justify-content: center;
-
-    font-size:13px;
+    align-items:flex-start;
+    line-height: 22px;
+    font-size:15px;
     
     background-color:#f5f8fa;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.sidebar-content{
+.signup-sidebar-block {
     display:flex;
     width: 250px;
-    align-items: center;
+    margin-left:51px;
+    height:65%;
 }
 
-.sidebar-text {
-    line-height: 18px;
-    font-size:13px;
-
+.sidebar-sidebar-text div {
     display:flex;
     align-items: center;
     flex-direction: column;
     justify-content: space-around;
 
-    margin-left: 30px;
+    margin-left: 70px;
 }
 
 .sidebar-text p{
     font-weight: 100;
+}
+
+.signup-error-messages ul {
+    line-height: 30px;
+    padding:10px;
+    color:#fa5000;
+    list-style-type: disc;
+    padding-left:17px;
+    margin-top:10px;
 }

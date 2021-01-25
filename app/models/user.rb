@@ -1,13 +1,24 @@
 class User < ApplicationRecord
 
     # Figvaper
-    validates :first_name, presence: true, uniqueness: true
-    validates :last_name, presence: true, uniqueness: true
-    validates :email, presence: true, uniqueness: true
+    validates_presence_of :first_name, message: "Please enter your first name."
+    validates_presence_of :last_name, message: "Please enter your last name."
+    validates_presence_of :email, message: "Please enter your email."
     validates :password_digest, :session_token, presence: true
-    validates :password, length: { minimum: 6 }, allow_nil: true
+    validates :password, length: { minimum: 10, 
+    message: "Your password must be at least 10 characters." 
+    }, allow_nil: true
+
+    # specific sign-up error messages
+    
+    
+    #  message: "Your password must be at least 10 characters."
+    
+
+    
     after_initialize :ensure_session_token
 
+    
     attr_reader :password
 
     def self.find_by_credentials(email, password)

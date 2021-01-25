@@ -12,7 +12,7 @@
 //nav-bar
 
 .portfolio-nav-bar {
-    position:sticky;
+    position: sticky;
     width:90%;
     display: flex;
     justify-content: space-around;
@@ -93,7 +93,7 @@
 //main block
 
 .portfolio-main-wrapper{
-
+    margin-left:100px;
     display:flex;
     flex-direction:row;
     height: 600px;
@@ -202,7 +202,7 @@
 
 //sidebar
 .portfolio-sidebar-wrapper{
-    width:276px;
+    width:290px;
     height:500px;
 
     display:flex;
@@ -215,7 +215,8 @@
         border-radius:3px;
         background-color:#30363a;
         width:90%;
-        height:400px;
+        height:459px;
+        margin-left:40px;
     }
 }
 
