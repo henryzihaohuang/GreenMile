@@ -49,7 +49,7 @@ class SessionForm extends React.Component {
 
     
     handleDemo(e) {
-        this.props.action({ email: "dollyparton@gmail.com", password: "password" })
+        this.props.action({ email: "dollyparton@gmail.com", password: "password123" })
     }
 
 
