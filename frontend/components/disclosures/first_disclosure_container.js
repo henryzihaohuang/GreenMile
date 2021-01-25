@@ -1,6 +1,6 @@
-import React from 'react';
+
 import {connect} from 'react-redux';
-import Disclosure from './disclosure';
+import FirstDisclosure from './disclosure';
 
 import { closeModal } from '../../actions/modal';
 
@@ -12,4 +12,4 @@ const mDtP = (dispatch) => {
     closeModal: () => dispatch(closeModal());
 };
 
-export default connect(mStP, mDtP)(Disclosure);
+export default connect(mStP, mDtP)(FirstDisclosure);

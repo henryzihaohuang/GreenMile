@@ -16,106 +16,105 @@ class Portfolio extends React.Component {
     render(){
         
         return(
-            <div className="portfolio-wrapper">
-                <div className="portfolio-nav-bar">
+            <section className="portfolio-wrapper">
+                <section className="portfolio-nav-bar">
 
-                    <div>
-                        <a href="/"><img className="logo-img" src={window.logoURL} /></a>
-                    </div>
+                    <span>
+                        <a><img className="logo-img" src={window.logoURL} /></a>
+                    </span>
 
-                    <div className="searchbar-block">
+                    <span className="searchbar-block">
                         <input
                             type="text"
                             className="searchbar-element"
                             placeholder= "Search"
                         />
-                    </div>
+                    </span>
 
-                    <div className="portfolio-nav-bar-block">
+                    <span className="portfolio-nav-bar-block">
                         <ul>
-                            <div className="portfolio-nav-bar-element">
+                            <span className="portfolio-nav-bar-element">
                                 <a className="portfolio-nav-bar-element"href="https://www.linkedin.com/in/zihaohuang/"><li>LinkedIn</li></a>
-                            </div>
-                            <div className="portfolio-nav-bar-element">
+                            </span>
+                            <span className="portfolio-nav-bar-element">
                                 <a className="portfolio-nav-bar-element"href="https://github.com/henryzihaohuang"><li>GitHub</li></a>
-                            </div>
-                            <div className="portfolio-nav-bar-element-wip">
+                            </span>
+                            <span className="portfolio-nav-bar-element-wip">
                                 <li>Account</li>
-                            </div>
-                            <div className="portfolio-nav-bar-element">
+                            </span>
+                            <span className="portfolio-nav-bar-element">
                                 <li><span onClick={this.handleSubmit}>Logout</span></li>
-                            </div>
+                            </span>
                         </ul>
-                    </div>
+                    </span>
                 
-                </div>
+                </section>
                 
-                <div className="portfolio-main-wrapper">
-                    <div className="portfolio-main-block">
-                    <div className="portfolio-graph-block">
-                        <div className="portfolio-balance-block">
-                            <div className="balance-element">$10,000</div>
-                            <div>+$30.60 (+2.24%) <span className="today-afterhours-text-element">Today</span> 
-                            </div>
-                            <div>-$0.29 (-0.02%) <span className="today-afterhours-text-element">After Hours</span></div>
+                <section className="portfolio-main-wrapper">
+                    <span className="portfolio-main-block">
+                    <span className="portfolio-graph-block">
+                        <span className="portfolio-balance-block">
+                            <span className="balance-element">$10,000</span>
+                            <span>+$30.60 (+2.24%) <span className="today-afterhours-text-element">Today</span> 
+                            </span>
+                            <span>-$0.29 (-0.02%) <span className="today-afterhours-text-element">After Hours</span></span>
                             
 
-                            <div className="graph-img">
+                            <span className="graph-img">
                                 <img src={window.graphURL}></img>
-                            </div>
+                            </span>
                             <br/>
-                        </div>
-                        <div className="time-bar-block">
+                        </span>
+                        <span className="time-bar-block">
                             <ul>
-                                <div className="time-bar-elements">
+                                <span className="time-bar-elements">
                                     <li>1D</li>
-                                </div>
-                                <div className="time-bar-elements">
+                                </span>
+                                <span className="time-bar-elements">
                                     <li>1W</li>
-                                </div>
-                                <div className="time-bar-elements">
+                                </span>
+                                <span className="time-bar-elements">
                                     <li>1M</li>
-                                </div>
-                                <div className="time-bar-elements">
+                                </span>
+                                <span className="time-bar-elements">
                                     <li>3M</li>
-                                </div>
-                                <div className="time-bar-elements">
+                                </span>
+                                <span className="time-bar-elements">
                                     <li>1Y</li>
-                                </div>
-                                <div className="time-bar-elements">
+                                </span>
+                                <span className="time-bar-elements">
                                     <li>ALL</li>
-                                </div>
+                                </span>
                             </ul>
-                        </div>
+                        </span>
 
 
-                    </div>
-                    <div className="portfolio-buying-power-block">
-                        <div className="buying-power">
+                    </span>
+                    <section className="portfolio-buying-power-block">
+                        <span className="buying-power">
                             <h2>Buying Power</h2>
-                        </div>
-                        <div className="balance"><p>$10,000</p></div>
-                    </div>
+                        </span>
+                        <span className="balance"><p>$10,000</p></span>
+                    </section>
                     
-                    <div className="portfolio-sidebar-block"></div>
-                    </div>
+                    </span>
                 
-                    <div className="portfolio-sidebar-wrapper">
-                        <div className="portfolio-sidebar-wrapper">
-                            <div className="portfolio-sidebar-elements">
-                                <div className="portfolio-sidebar-row">
+                    <section className="portfolio-sidebar-wrapper">
+                        <span className="x-needs-to-be-fixed">
+                            <span className="portfolio-sidebar-elements">
+                                <span className="portfolio-sidebar-row">
                                     Stocks
-                                </div>
-                                <div className="portfolio-sidebar-row">
+                                </span>
+                                <span className="portfolio-sidebar-row">
                                     Lists
-                                </div>
+                                </span>
 
-                            </div>
+                            </span>
 
-                        </div>
-                    </div>
-                </div>
-            </div>
+                        </span>
+                    </section>
+                </section>
+            </section>
 
         )
     }

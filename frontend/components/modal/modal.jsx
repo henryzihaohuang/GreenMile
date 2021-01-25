@@ -1,29 +1,34 @@
 import React from 'react';
-import DisclosureContainer from '../disclosure/disclosure';
+import FirstDisclosureContainer from '../disclosures/first_disclosure';
+import FooterDisclosureContainer from '../disclosures/footer_disclosure_container'
 
 const Modal= ({modal, closeModal}) => {
     if (!modal){
         return null
     }
     let disclosureModal;
-    
+    let modalClass;
     switch(modal){
         case 'disclosure':
-            debugger
-            disclosureModal = <DisclosureContainer />
+            disclosureModal = <FirstDisclosureContainer />
+            modalClass= "modal-block";
+            break;
+        case 'footer':
+            disclosureModal = <FooterDisclosureContainer />
+            modalClass= "footer-modal-block";
             break;
         default:
             return null;
     }
 
     return (
-        <div className="modal-background-wrapper" onClick={closeModal}>
-            <div className="modal-block" onClick={(e => e.stopPropogation())} >
-                <div className="modal-element">
+        <section className="modal-background-wrapper" onClick={closeModal}>
+            <span className={modalClass} onClick={(e => e.stopPropogation())} >
+                <span className="modal-element">
                     {disclosureModal}
-                </div>
-            </div>
-        </div>
+                </span>
+            </span>
+        </section>
     );
 };
 
