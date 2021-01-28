@@ -33,9 +33,9 @@ export const fetchPriceHistory = (abbreviation, timeRange) => {
 
 export const fetchCompanyNews = (abbreviation) => {
     // debugger
-    const key = "Tsk_6488ea780c834facbb5e1124dd77e34a";
+    const key = "pk_96d66ea070a04293b36c118fd600f0d5 ";
     return $.ajax({
         method: "GET",
-        url: `https://sandbox.iexapis.com/stable/stock/${abbreviation}/news?token=${key}`
+        url: `https://cloud.iexapis.com/stable/stock/${abbreviation}/news?token=${key}`
     })
 }

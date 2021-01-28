@@ -12,12 +12,12 @@ class Portfolio extends React.Component{
 
 
     componentDidMount() {
-        
-        this.props.fetchHistory("TSLA", "5d");
+        // debugger
+        this.props.fetchHistory("TSLA", "1y");
         // this.props.fetchHistory("NFLX", "5d");
-        // this.props.fetchHistory("GME", "5d");
+
         this.props.fetchNews("TSLA");
-        
+        debugger
     }
 
     handleSubmit(e) {
@@ -30,19 +30,18 @@ class Portfolio extends React.Component{
     render(){
         // debugger
 
-        if (Object.keys(this.props.entities.stock).length === 0){
+        if (Object.values(this.props.entities.stock).length===0){
             return null;
         };
+            
+            const TSLA = this.props.entities.stock.TSLA['chart'];
+            // const NFLX = this.props.entities.stock.NFLX['chart'];
+            const news = this.props.entities.news
+            debugger
 
-        const TSLA = this.props.entities.stock.prices.TSLA['chart'];
-        // const NFLX = this.props.entities.stock.prices.NFLX['chart'];
-        // const GME = this.props.entities.stock.prices.GME['chart'];
+            const img = `${ news[0].image }`
 
-        const news = this.props.entities.news
-        debugger
-        
-
-        return(
+            return(
             <section className="portfolio-wrapper">
                 <section className="portfolio-nav-bar">
 
@@ -124,36 +123,117 @@ class Portfolio extends React.Component{
                         </section>
 
 
+                        <section className="portfolio-popular-list-wrapper">
+                            <span className="portfolio-popular-list-header">
+                                <span>Popular Lists</span>
+                                <span>None of this is real</span>
+                            </span>
+
+                            <span className="portfolio-popular-list-element">
+
+
+                                <span className="portfolio-popular-list-tag">
+                                    Billboard top 100
+                                </span>
+
+                                <span className="portfolio-popular-list-tag">
+                                    I have $3
+                                </span>
+
+                                <span className="portfolio-popular-list-tag">
+                                    CHINA
+                                </span>
+                                <span className="bubble">
+                                    <span className="portfolio-popular-list-tag">
+                                        Tech, Media, & Everything Matrix
+                                    </span>
+                                </span>
+                                <span className="portfolio-popular-list-tag">
+                                   For Drag queens 
+                                </span>
+                                <span className="portfolio-popular-list-tag">
+                                    This one is literally just for Oprah
+                                </span>
+                                <span className="portfolio-popular-list-tag">
+                                    Help me I'm poor
+                                </span>
+                                <span className="portfolio-popular-list-tag">
+                                    Red pill
+                                </span>
+                                <span className="portfolio-popular-list-tag">
+                                    Blue pill
+                                </span>
+                                <span className="portfolio-popular-list-tag">
+                                    Stonks
+                                </span>
+                                <span className="portfolio-popular-list-tag">
+                                    11010101010110101011
+                                </span>
+                                <span className="portfolio-popular-list-tag">
+                                    Wake up Neo
+                                </span>
+                                <span className="portfolio-popular-list-tag">
+                                    Venti Salt Caramel Macchiato, please
+                                </span>
+                                <span className="portfolio-popular-list-tag">
+                                    Bloop bleep bloop...rendering
+                                </span>
+                                <span className="portfolio-popular-list-tag">
+                                    I needa do some yoga
+                                </span>
+
+
+                            </span>
+                        </section>
+
                         <section className="portfolio-news-wrapper">
                             <span className="portfolio-news-element-header">
                                 <span>News</span>
                             </span>
 
                             <span className="portfolio-news-block">
-                                
-
-                                <span className="portfolio-news-element-1">
-                                    <span className="portfolio-news-element-1-body">
-                                        <span>
+                                <span className="portfolio-news-element">
+                                    <span className="portfolio-news-element-body">
+                                        <span className="news-source-text">
                                             {news[0].source}
                                         </span>
-                                        <span>
+                                        <span className="news-headline-text">
                                             {news[0].headline}
                                         </span>
-                                        <span>
+                                        <span className="news-summary-text">
                                             {news[0].summary}
                                         </span>
                                     </span>
-                                    <span className="portfolio-news-element-1-img">
+                                    <span className="portfolio-news-element-img">
                                         <span>
-                                            <img src={news[0].image} />
+                                                <img className="news-img" src={img} />
+                                        </span>
+                                    </span>
+                                </span>
+
+
+                                <span className="portfolio-news-element">
+                                    <span className="portfolio-news-element-body">
+                                        <span className="news-source-text">
+                                            {news[1].source}
+                                        </span>
+                                        <span className="news-headline-text">
+                                            {news[1].headline}
+                                        </span>
+                                        <span className="news-summary-text">
+                                            {news[1].summary}
+                                        </span>
+                                    </span>
+                                    <span className="portfolio-news-element-img">
+                                        <span>
+                                            <img className="news-img" src={img} />
                                         </span>
                                     </span>
                                 </span>
                             </span>
                         </section>
-                    
                     </span>
+                    
                 
                     <section className="portfolio-sidebar-wrapper">
                         <span className="portfolio-sidebar-block">
@@ -184,7 +264,7 @@ class Portfolio extends React.Component{
 
                                         <li className="watchlist-stock-item">
                                             <span>TSLA</span>
-                                            <span><WatchlistGraph data={TSLA}/></span>
+                                            <span><WatchlistGraph data={TSLA} /></span>
                                             <span>
                                                 <span>numbers</span>
                                                 <span>numbers</span>
@@ -208,18 +288,17 @@ class Portfolio extends React.Component{
                                                 <span>numbers</span>
                                             </span>
                                         </li>
-
                                     </ul>
                                 </span>
-
                             </span>
-
                         </span>
                     </section>
                 </section>
             </section>
 
         )
+
+        
     }
 
 }

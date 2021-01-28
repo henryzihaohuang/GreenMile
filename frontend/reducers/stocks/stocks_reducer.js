@@ -23,9 +23,11 @@ const stocksReducer = (state= {}, action) => {
             return nextState;
 
         case RECEIVE_PRICE_HISTORY:
-            nextState['prices'] = action.prices;
-            return nextState;
+            const key = Object.keys(action.prices)[0]
+            const newState = Object.assign({}, state, { [key]: Object.values(action.prices)[0]});
 
+            debugger
+            return newState;
         default:
             return state;
     }
