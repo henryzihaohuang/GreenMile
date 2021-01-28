@@ -28,6 +28,8 @@ gem 'better_errors'
 gem 'binding_of_caller'
 gem 'pry-rails'
 gem "jquery-rails"
+gem "figaro"
+gem 'iex-ruby-client'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

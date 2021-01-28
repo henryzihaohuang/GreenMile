@@ -4,13 +4,12 @@
     align-items: center;
     flex-direction: column;
     background-color: black;
-    height:700px;
+    height:2000px;
     width:100%;
     color:white;
 }
 
 //nav-bar
-
 .portfolio-nav-bar {
     position: sticky;
     width:90%;
@@ -40,7 +39,6 @@
 
 
 .portfolio-nav-bar-element-wip{
-    
     text-decoration:none;
 }
 
@@ -68,6 +66,10 @@
     padding:0;
     height: 33px;
     background-color:transparent;
+
+    background-image: url(https://cdn2.hubspot.net/hubfs/4004166/bioticresearch_website_assets/images/search_icon.png);
+    background-repeat: no-repeat;
+    background-position: left center;
 
     border-style:solid;
     
@@ -97,10 +99,17 @@
     display:flex;
     flex-direction:row;
     height: 600px;
+    width:70%;
 }
 
 .portfolio-main-block{
     height:100%;
+}
+
+
+.watchlist-preview-graph-img{
+    height:77px;
+    width:77px;
 }
 
 .portfolio-graph-block {
@@ -118,7 +127,6 @@
 }
 
 .portfolio-buying-power-block {
-
     padding:30px;
     width:610px;
     flex-direction:column;
@@ -132,12 +140,14 @@
     font-size: 33px;
 }
 
-.graph-img {
+.recharts-wrapper{   
+    border:1px solid grey;
+    // position:static;
+    // width: 500px;
+    // height: 300px;
+}
 
-    height: 100%;
-    width:610px;
-    float: left;
-    overflow: hidden;
+.graph-img {
     animation: reveal 4s ease;
     animation-fill-mode: backwards;
 }
@@ -150,6 +160,7 @@
         width: 100%;
     }
 }
+
 @keyframes reveal {
     from {
         width: 0px;}
@@ -193,7 +204,6 @@
 }
 
 .portfolio-balance-block{
-
     display:flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -208,7 +218,7 @@
 
 //sidebar
 .portfolio-sidebar-wrapper{
-    width:290px;
+    width:302px;
     height:500px;
 
     display:flex;
@@ -216,18 +226,103 @@
     align-items: center;
     justify-content: center;
 
-    .x-needs-to-be-fixed{
+    .portfolio-sidebar-block{
+        box-shadow: 0px 0px 20px 11px rgba(87, 87, 87, 0.56) ;
+
         border:1px solid rgb(70, 69, 69);
         border-radius:3px;
-        background-color:#30363a;
+        background-color:#1e2124;
         width:90%;
         height:459px;
         margin-left:40px;
     }
 }
 
-
-
-.portfolio-sidebar-row{
-    width:100%
+.portfolio-sidebar-elements {
+    
+    height:900px;
 }
+
+.portfolio-sidebar-frozen-row{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid rgb(70, 69, 69);
+    width:100%;
+    height:52px;
+}
+
+.portfolio-sidebar-stocks-header{
+    margin-left:-40px;
+}
+
+.portfolio-sidebar-elements{
+    display:vflex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+}
+
+.portfolio-sidebar-watchlist-header{
+    margin-left:-40px;
+}
+
+.portfolio-sidebar-dropdown{
+    margin-right: -22px;
+}
+
+
+.portfolio-sidebar-dropdown-2{
+    margin-right: -26px;
+}
+
+.watchlist-block{
+    display:flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+}
+
+.watchlist-abbr{
+    font-weight:bold;
+
+}
+
+.watchlist-stock-item{
+    font-size:13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(70, 69, 69);
+    width:259px;
+    height:52px;
+}
+
+.watchlist-stock-item span{
+    margin:5px;
+}
+
+//news block
+
+.portfolio-news-wrapper{
+
+    border: 1px solid white;
+    height: 600px;
+    border-bottom: 1px solid rgb(70, 69, 69);
+}
+
+.portfolio-news-block{
+    border: 1px solid white;
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-news-element{
+
+}
+
+
+
+

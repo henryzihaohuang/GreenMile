@@ -6,14 +6,15 @@ import PortfolioContainer from './portfolio/portfolio_container';
 import { Route } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../utils/route_utils';
 import ModalContainer from '../components/modal/modal_container';
-
-// To Do: ProtectedRoute still needs to be written for portfolio/stocks
+import Graph from './portfolio/graph';
 
 const App = ({state}) => {
+    console.log(HomepageContainer);
     return (
         <div>
                 <ModalContainer />
-                <Route exact path="/" component={HomepageContainer} />
+                
+                <Route exact path="/" render={(props)=> <HomepageContainer {...props}/>} />
                 <AuthRoute exact path="/login" component={LogInContainer} />
                 <AuthRoute exact path="/signup" component={SignUpContainer} />
                 <ProtectedRoute exact path="/portfolio" component={PortfolioContainer} />

@@ -14,6 +14,19 @@
     @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap');
     </style>
 
+    <script type="text/javascript">
+      window.cloudAPIKey = "<%= Rails.application.credentials.iexcloud[:api_key] %>"
+    </script>
+
+
+    <script type="text/javascript">
+      window.searchURL = "<%= image_url('search.png') %>";
+    </script>
+
+
+   <script type="text/javascript">
+      window.videoURL = "<%= image_url('homepage-video.mp4') %>";
+    </script>
 
     <script type="text/javascript">
       window.logoURL = "<%= image_url('forest-badge.png') %>";
@@ -36,6 +49,9 @@
     </script>
 
     <%= favicon_link_tag asset_path('forest-badge.png') %>
+
+
+    
     <% if current_user %>
       <script>
       window.currentUser = {

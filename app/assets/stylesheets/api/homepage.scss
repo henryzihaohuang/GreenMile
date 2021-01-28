@@ -138,11 +138,31 @@
     background-color: #343536;
 }
 
-.image-box{
-    width: 587px;
-    height:576px;
+.image-box {
     margin-top: 40px;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left:350px;
 }
+
+.cellphone-img {
+    position:absolute;
+    z-index:1;
+    width: 657px;
+    height: 86%;
+}
+
+.homepage-video{
+  height: 86%;
+  background-color: transparent;
+  position: absolute;
+  z-index:0;
+  margin-left:2px;
+}
+
 .modal-page-wrapper{
     margin-top:16px;
     width:248px;
@@ -166,20 +186,7 @@
     // width:18px;
 }
 
-.image-box {
-    width: 70%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
 
-.cellphone-img {
-    width: 640px;
-    height: 80%;
-    margin-left:300px;
-}
 
 //footer
 .portfolio-footer-wrapper {

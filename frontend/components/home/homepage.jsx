@@ -49,7 +49,8 @@ class Homepage extends React.Component {
                             
                         </span>
                         <div className="image-box">
-                            <img className="cellphone-img" src={window.splashURL} />
+                                <img className="cellphone-img" src={window.splashURL}/>
+                                <video src={window.videoURL} draggable="false" className="homepage-video" autoPlay controlsList="nodownload nofullscreen noremoteplayback" loop muted playsInline preload="auto" />
                         </div>
                     </span>
                 </section>
