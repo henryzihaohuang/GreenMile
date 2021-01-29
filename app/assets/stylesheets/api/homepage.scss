@@ -36,6 +36,27 @@
 }
 
 
+.homepage-linkedin-block{
+    font-size: 19px;
+    width: 160px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 100;
+    margin-right: 560px;
+}
+
+.home-linkedin-link:hover, .home-github-link:hover{
+    color: #2fc802;
+    cursor: pointer;
+}
+
+.home-linkedin-link, .home-github-link{
+    text-decoration:none;
+    color:black
+}
+
 .homepage-signup-button-block {
     font-weight: bold;
     width: 142px;

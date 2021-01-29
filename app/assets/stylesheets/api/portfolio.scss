@@ -67,9 +67,10 @@
     height: 33px;
     background-color:transparent;
 
-    background-image: url();
+    background-image: image-url('search.png');
     background-repeat: no-repeat;
     background-position: left center;
+    background-size:auto;
 
     border-style:solid;
     
@@ -210,16 +211,16 @@
     justify-content: flex-end;
 }
 
-
 //sidebar
 .portfolio-sidebar-wrapper{
     width:302px;
     height:500px;
-
+    position: fixed;
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-left: 650px;
 
     .portfolio-sidebar-block{
         box-shadow: 0px 0px 20px 11px rgba(87, 87, 87, 0.56) ;
@@ -231,71 +232,73 @@
         height:459px;
         margin-left:40px;
     }
-}
 
-.portfolio-sidebar-elements {
+    .portfolio-sidebar-elements {
     
     height:900px;
+    }
+
+    .portfolio-sidebar-frozen-row{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-bottom: 1px solid rgb(70, 69, 69);
+        width:100%;
+        height:52px;
+    }
+
+    .portfolio-sidebar-stocks-header{
+        margin-left:-40px;
+    }
+
+    .portfolio-sidebar-elements{
+        display:vflex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: center;
+    }
+
+    .portfolio-sidebar-watchlist-header{
+        margin-left:-40px;
+    }
+
+    .portfolio-sidebar-dropdown{
+        margin-right: -22px;
+    }
+
+
+    .portfolio-sidebar-dropdown-2{
+        margin-right: -26px;
+    }
+
+    .watchlist-block{
+        display:flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: center;
+    }
+
+    .watchlist-abbr{
+        font-weight:bold;
+
+    }
+
+    .watchlist-stock-item{
+        font-size:13px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgb(70, 69, 69);
+        width:259px;
+        height:52px;
+    }
+
+    .watchlist-stock-item span{
+        margin:5px;
+    }
+
 }
 
-.portfolio-sidebar-frozen-row{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border-bottom: 1px solid rgb(70, 69, 69);
-    width:100%;
-    height:52px;
-}
-
-.portfolio-sidebar-stocks-header{
-    margin-left:-40px;
-}
-
-.portfolio-sidebar-elements{
-    display:vflex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: center;
-}
-
-.portfolio-sidebar-watchlist-header{
-    margin-left:-40px;
-}
-
-.portfolio-sidebar-dropdown{
-    margin-right: -22px;
-}
-
-
-.portfolio-sidebar-dropdown-2{
-    margin-right: -26px;
-}
-
-.watchlist-block{
-    display:flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: center;
-}
-
-.watchlist-abbr{
-    font-weight:bold;
-
-}
-
-.watchlist-stock-item{
-    font-size:13px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid rgb(70, 69, 69);
-    width:259px;
-    height:52px;
-}
-
-.watchlist-stock-item span{
-    margin:5px;
-}
 
 //popular-list-block
 .portfolio-popular-list-wrapper{
@@ -303,8 +306,7 @@
     display:flex;
     flex-direction: column;
     margin-left:-38px;
-    height:250px;
-    width: 95%;
+    width: 74.5%;
 }
 
 .portfolio-popular-list-header{
@@ -316,13 +318,14 @@
 .portfolio-popular-list-element{
     padding:28px;
     padding-top:2px;
-
-    
 }
 
 .portfolio-popular-list-tag{
-    padding-left: 20px;
     padding-right: 20px;
+    padding-left: 39px;
+    margin-right: 9px;
+    margin-top: 4px;
+
     font-size:11px;
     font-weight:300;
     white-space: nowrap;
@@ -330,7 +333,20 @@
     line-height:32px;
     border:1px solid white;
     border-radius: 40px;
-    background-color: rgb(20, 20, 20)
+    background-color: rgb(20, 20, 20);
+}
+
+.portfolio-popular-list-tag:hover{
+    background-color: rgb(59, 59, 59);
+}
+
+.popular-list-img{
+  border-radius:50%;
+  margin-left: -26px;
+  margin-top: 5px;
+  height: 20px;
+  width: 20px;
+  position: absolute;
 }
 
 //news block
@@ -340,6 +356,7 @@
     justify-content: space-between;
     align-items:center;
     padding:28px;
+    border-bottom:1px solid rgb(70, 69, 69);
 }
 
 .portfolio-news-wrapper{
@@ -347,8 +364,8 @@
     display:flex;
     // flex-direction:column;
     align-items: start;
-    height: 600px;
     border-bottom: 1px solid rgb(70, 69, 69);
+    width: 670px;
 }
 
 .portfolio-news-block{
@@ -363,34 +380,46 @@
 
 .portfolio-news-element{
     margin-top:20px;
-    border:1px solid rgb(168, 168, 168);
     display:flex;
     flex-direction:row;
     padding: 20px;
+    height: 200px;
+}
+
+.portfolio-news-element:hover{
+    background-color:rgb(70, 69, 69);
 }
 
 .portfolio-news-element-body{
     display:flex;
     flex-direction: column;
-
+    justify-content: space-between;
     padding:10px;
 }
 
 
 .news-source-text{
-    font-size:11px;
+    font-size:13px;
+    font-weight: 900;
 }
 .news-headline-text{
-    font-size:11px;
+    font-size: 21px;
 }
 .news-summary-text{
-    font-size:11px;
+    font-size: 12px;
+    word-wrap: break-word;
+    font-weight: 100;
+    color: grey;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: pre-wrap;
+    
 }
 .portfolio-news-element-img{
     font-size:11px;
 }
 
 .news-img{
-    height:163px;
-    width:300px;
+    height:160px;
+    width:270px;
 }

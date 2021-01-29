@@ -8,8 +8,6 @@ import {
     fetchIntradayInfo,
 } from '../../actions/stock';
 
-import { fetchNews } from '../../actions/news'
-
 const mStP = (state, ownProps) => {
     return {
         entities: state.entities
@@ -19,14 +17,9 @@ const mStP = (state, ownProps) => {
 const mDtP = (dispatch) => {
     return {
         action: () => dispatch(logout()),
-
         fetchCompany: (abbreviation) => dispatch(fetchCompanyInfo(abbreviation)),
-
         fetchHistory: (abbreviation, timeRange) => dispatch(fetchPriceHistory(abbreviation, timeRange)),
-
-        fetchIntradayInfo: (abbreviation) => dispatch(fetchIntradayInfo(abbreviation)),
-
-        fetchNews: (abbreviation) => dispatch(fetchNews(abbreviation))
+        fetchIntradayInfo: (abbreviation) => dispatch(fetchIntradayInfo(abbreviation))
     }
 };
 

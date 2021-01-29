@@ -15,6 +15,16 @@ class Homepage extends React.Component {
                         <a className="homepage-links" href="/"> GreenMile </a>  
                         <a href="/"><img className="logo-img" src={window.logoURL} /></a>
                     </span> 
+                    <span className="homepage-linkedin-block">
+                        <span className="homepage-linkedin-button">
+                                <a className="home-linkedin-link" href="https://www.linkedin.com/in/zihaohuang/">LinkedIn</a>
+                        </span>
+                        <span className="homepage-github-button">
+                                <a className="home-github-link" href="https://github.com/henryzihaohuang">Github</a>
+                        </span>
+
+                    </span>
+                    
                     <span className="homepage-signup-login-block">
                         <span className="homepage-login-button">
                             <Link className="homepage-login-button-text-element" to="/login">Log In</Link>
