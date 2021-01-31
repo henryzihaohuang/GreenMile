@@ -1,9 +1,9 @@
 import React from 'react';
 
 class PopularLists extends React.Component{
-
-
     render(){
+
+
         return(
             <section className="portfolio-popular-list-wrapper">
                 <span className="portfolio-popular-list-header">
@@ -12,11 +12,9 @@ class PopularLists extends React.Component{
                 </span>
 
                 <span className="portfolio-popular-list-element">
-
-
                     <span className="portfolio-popular-list-tag">
                         <span className="popular-list-img-tag">
-                            <img className="popular-list-img" src="https://cdn.robinhood.com/app_assets/list_illustrations/100_most_popular/portrait_48/1x.png" />
+                            <img onClick={this.handleClick} className="popular-list-img" src="https://cdn.robinhood.com/app_assets/list_illustrations/100_most_popular/portrait_48/1x.png" />
                         </span>
                         <span>Billboard top 100</span>
                     </span>
