@@ -17,8 +17,6 @@ class Portfolio extends React.Component{
         this.setState({ nextImg: !this.state.nextImg })
     }
 
-
-    
     componentDidMount() {
         this.props.fetchHistory("GME", "1y");
     }
@@ -31,10 +29,6 @@ class Portfolio extends React.Component{
             };
             
             const GME = this.props.entities.stock.GME['chart'];
-            debugger
-
-        const imgUrl = this.state.nextImg ?  {window.}: null;
-        const divStyle = { backgroundImage: 'url(' + imgUrl + ')' };
             
         return(
             <section className="portfolio-wrapper">
