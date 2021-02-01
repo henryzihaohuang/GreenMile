@@ -30,7 +30,7 @@ export const fetchPriceHistory = (abbreviation, timeRange) => {
     })
 }
 
-testing
+// testing
 export const fetchCompanyNews = (abbreviation) => {
     // debugger
     const key = "Tsk_6488ea780c834facbb5e1124dd77e34a";
