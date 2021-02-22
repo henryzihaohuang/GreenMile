@@ -14,5 +14,10 @@ class Search extends React.component{
     }
 
 
+    componentDidMount(){
+        if(!this.props.stocks){
+            
+        }
+    }
 
 }

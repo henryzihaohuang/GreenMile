@@ -1,7 +1,8 @@
 import {
     RECEIVE_COMPANY_INFO,
     RECEIVE_INTRADAY_INFO,
-    RECEIVE_PRICE_HISTORY
+    RECEIVE_PRICE_HISTORY,
+    RECEIVE_STOCK_ABBREVIATIONS
 } from '../../actions/stock';
 
 
@@ -27,6 +28,11 @@ const stocksReducer = (state= {}, action) => {
 
             const newState = Object.assign({}, state, { [key]: Object.values(action.prices)[0]});
             debugger
+            return newState;
+
+        case RECEIVE_STOCK_ABBREVIATIONS:
+            nextState['prices'] = action.prices;
+            nextState['stocks'] = action.stocks;
             return newState;
         
         default:

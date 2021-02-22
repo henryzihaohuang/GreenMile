@@ -5,7 +5,7 @@ import newsReducer from '../news/news_reducer';
 
 const entitiesReducer = combineReducers({
     session: sessionReducer,
-    stock: stocksReducer,
+    stocks: stocksReducer,
     news: newsReducer
 })
 
