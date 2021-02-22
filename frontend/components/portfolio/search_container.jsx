@@ -1,19 +1,19 @@
 import { connect } from 'react-redux';
-import { logout } from '../../actions/session';
 import Search from './search';
 
-import {
+import { fetchStocksAbbr
 } from '../../actions/stock';
 
 const mStP = (state, ownProps) => {
     return {
-        entities: state.entities
+        stocks: state.entities.stocks.stocks
     }
 };
 
 const mDtP = (dispatch) => {
     return {
+        fetchStocks: () => dispatch(fetchStocksAbbr())
     }
 };
 
-export default connect(mStP, mDtP)(Portfolio);
+export default connect(mStP, mDtP)(Search);

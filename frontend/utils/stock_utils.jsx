@@ -51,3 +51,10 @@ export const fetchCompanyNews = (abbreviation) => {
 // }
 
 
+export const fetchStocksAbbr = () => (
+    $.ajax({
+        method: "GET",
+        url: `api/stocks`
+    })
+)
+

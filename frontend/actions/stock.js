@@ -3,6 +3,7 @@ import * as APIStockUtil from "../utils/stock_utils";
 export const RECEIVE_COMPANY_INFO = "RECEIVE_COMPANY_INFO ";
 export const RECEIVE_INTRADAY_INFO = "RECEIVE_INTRADAY_INFO";
 export const RECEIVE_PRICE_HISTORY = "RECEIVE_PRICE_HISTORY";
+export const RECEIVE_STOCK_ABBREVIATIONS = "RECEIVE_STOCK_ABBREVIATIONS";
 
 const receiveCompany = (company, abbr) => {
     return {
@@ -28,6 +29,11 @@ const receiveHistory = (abbr, prices) => {
         prices
     }
 }
+
+const receiveStocks = (stocks) => ({
+    type: RECEIVE_STOCK_ABBREVIATIONS,
+    stocks
+})
 
 
 export const fetchCompanyInfo = (abbreviation) => {
@@ -57,3 +63,10 @@ export const fetchPriceHistory = (abbreviation, timeRange) => {
     }
 }
 
+export const fetchStocksAbbr = () => {
+    return (dispatch) => {
+        return APIStockUtil.fetchStockAbbr()
+            .then(
+                (stocks) => dispatch(receiveStocks(stocks)))
+    }   
+}
