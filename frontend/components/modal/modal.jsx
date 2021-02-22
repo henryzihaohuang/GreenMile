@@ -23,7 +23,7 @@ const Modal= ({modal, closeModal}) => {
 
     return (
         <section className="modal-background-wrapper" onClick={closeModal}>
-            <span className={modalClass} onClick={(e => e.stopPropogation())} >
+            <span className={modalClass} onClick={(e => {e.stopPropogation();})} >
                 <span className="modal-element">
                     {disclosureModal}
                 </span>

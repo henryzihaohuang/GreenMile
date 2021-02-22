@@ -186,7 +186,7 @@
 
 .modal-page-wrapper{
     margin-top:16px;
-    width:248px;
+    width:400px;
     font-size: 17px;
     margin-top:33px;
     font-weight: bold;
@@ -196,7 +196,6 @@
 }
 
 .disclosure-text-element:hover {
-    
     color: #2fc802;
     cursor: pointer;
 }
@@ -262,4 +261,42 @@
     
     color: #2fc802;
     cursor: pointer;
+}
+
+//block-one
+
+.block-one-wrapper{
+    display:flex;
+    flex-direction: column;
+}
+
+.block-one-header-element{
+    width:100%;
+    border-bottom: 1px solid black;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:40px;
+    padding-bottom:40px;
+    font-size:18px;
+}
+
+.block-content-wrapper{
+    
+}
+.block-content-block{
+    display:flex;
+    flex-direction: row;
+}
+
+.block-content-video video{
+    width:90vh;
+}
+
+.block-content-text{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
 }

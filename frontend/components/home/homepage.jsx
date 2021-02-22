@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import HomeBlockOneContainer from './hompage-block-1';
 
 class Homepage extends React.Component {
     
@@ -11,19 +12,19 @@ class Homepage extends React.Component {
             return (
             <section className="homepage-wrapper">
                 <span className="homepage-nav-bar">
-                    <span className="green-mile-logo-block">
+                    <div className="green-mile-logo-block">
                         <a className="homepage-links" href="/"> GreenMile </a>  
                         <a href="/"><img className="logo-img" src={window.logoURL} /></a>
-                    </span> 
-                    <span className="homepage-linkedin-block">
-                        <span className="homepage-linkedin-button">
+                    </div> 
+                    <div className="homepage-linkedin-block">
+                        <div className="homepage-linkedin-button">
                                 <a className="home-linkedin-link" href="https://www.linkedin.com/in/zihaohuang/">LinkedIn</a>
-                        </span>
-                        <span className="homepage-github-button">
+                        </div>
+                        <div className="homepage-github-button">
                                 <a className="home-github-link" href="https://github.com/henryzihaohuang">Github</a>
-                        </span>
+                        </div>
 
-                    </span>
+                    </div>
                     
                     <span className="homepage-signup-login-block">
                         <span className="homepage-login-button">
@@ -35,8 +36,8 @@ class Homepage extends React.Component {
                     </span>
                 </span>
                 <section className="first-section-wrapper">
-                    <span className="first-section-block">
-                        <span className="first-section-header-block">
+                    <div className="first-section-block">
+                        <div className="first-section-header-block">
                             <h1 className="first-section-header">Investing for Everyone
                             </h1>
                             <p className="first-section-body">
@@ -45,63 +46,68 @@ class Homepage extends React.Component {
                             <button className="body-signup-button">
                                 <Link to='/signup' className="body-signup-button-text"> Sign up</Link>
                             </button>
-                            <span className="modal-page-wrapper" >
-                                <span className="info-img">
+                            <div className="modal-page-wrapper" >
+                                <div className="info-img">
                                     <img  src={window.infoURL} /> 
-                                </span>
+                                </div>
 
-                                <span onClick={() => this.props.openModal('disclosure')} >
+                                <div onClick={() => this.props.openModal('disclosure')} >
                                     <h4 className="disclosure-text-element">
-                                        Free Stock Disclosure
+                                        Commissions & Free Stock Disclosure
                                     </h4>
-                                </span>
-                            </span>
+                                </div>
+                            </div>
                             
-                        </span>
+                        </div>
                         <div className="image-box">
                                 <img className="cellphone-img" src={window.splashURL}/>
                                 <video src={window.videoURL} draggable="false" className="homepage-video" autoPlay controlsList="nodownload nofullscreen noremoteplayback" loop muted playsInline preload="auto" />
                         </div>
-                    </span>
+                    </div>
                 </section>
+
+                <section>
+                    <HomeBlockOneContainer />
+                </section>
+
                 <section className="portfolio-footer-wrapper">
-                    <span className="portfolio-footer-block">
-                        <span className="portfolio-footer-border" >
+                    <div className="portfolio-footer-block">
+                        <div className="portfolio-footer-border" >
                             <br />
-                        </span>
-                        <span>
+                        </div>
+                        <div>
                             <p>
                                 © 2021 GreenMile. No rights reserved.
                                 <br />
                             </p>
-                        </span>
-                        <span>
+                        </div>
+                        <div>
                             <p>
                                 GreenMile means GreenMile Markets and its in-application and web experiences with its family of wholly owned subsidiaries which includes GreenMile Financial, GreenMile Securities, and GreenMile Crypto.
                             </p>
                                 <br />
-                        </span>
-                        <span>
+                        </div>
+                        <div>
                             <p>
                                 All investments involve risks, including the possible loss of capital. But think of the money you could make!
                             </p>
                                 <br />
-                        </span>
-                        <span>
+                        </div>
+                        <div>
                             <p>
                                 Securities trading is not really offered to self-directed customers by GreenMile Financial. GreenMile Financial is also not a member of the <a className="finra-link" href="https://www.finra.org/">Financial Industry Regulatory Authority (FINRA)</a>.
                             </p>
                                 <br />
-                        </span>
-                        <span className="footer-modal-page-wrapper" >
-                            <span className="info-img">
+                        </div>
+                        <div className="footer-modal-page-wrapper" >
+                            <div className="info-img">
                                 <img src={window.blackinfoURL} />
-                            </span>
-                            <span onClick={() => this.props.openModal('footer')} >
+                            </div>
+                            <div onClick={() => this.props.openModal('footer')} >
                                 <h4 className="view-important-text-element">View Important Disclosure</h4>
-                            </span>
-                        </span>
-                    </span>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </section>
         )
