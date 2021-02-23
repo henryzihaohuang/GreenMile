@@ -3,7 +3,7 @@ import * as APIStockUtil from "../utils/stock_utils";
 export const RECEIVE_COMPANY_INFO = "RECEIVE_COMPANY_INFO ";
 export const RECEIVE_INTRADAY_INFO = "RECEIVE_INTRADAY_INFO";
 export const RECEIVE_PRICE_HISTORY = "RECEIVE_PRICE_HISTORY";
-export const RECEIVE_STOCK_ABBREVIATIONS = "RECEIVE_STOCK_ABBREVIATIONS";
+export const RECEIVE_SEARCH_RESULTS = "RECEIVE_SEARCH_RESULTS";
 
 const receiveCompany = (company, abbr) => {
     return {
@@ -22,7 +22,6 @@ const receiveIntraday = (abbr, prices) => {
 }
 
 const receiveHistory = (abbr, prices) => {
-    // debugger
     return {
         type: RECEIVE_PRICE_HISTORY,
         abbr,
@@ -30,10 +29,12 @@ const receiveHistory = (abbr, prices) => {
     }
 }
 
-const receiveStocks = (stocks) => ({
-    type: RECEIVE_STOCK_ABBREVIATIONS,
-    stocks
-})
+const receiveSearchResults = (abbr) => {
+    return {
+        type: RECEIVE_SEARCH_RESULTS,
+        abbr
+    }
+}
 
 
 export const fetchCompanyInfo = (abbreviation) => {
@@ -55,7 +56,6 @@ export const fetchIntradayInfo = (abbreviation) => {
 }
 
 export const fetchPriceHistory = (abbreviation, timeRange) => {
-    // debugger
     return (dispatch) => {
         return APIStockUtil.fetchPriceHistory(abbreviation, timeRange)
             .then(
@@ -63,10 +63,10 @@ export const fetchPriceHistory = (abbreviation, timeRange) => {
     }
 }
 
-export const fetchStocksAbbr = () => {
+export const fetchSearch = (abbreviation) => {
     return (dispatch) => {
-        return APIStockUtil.fetchStockAbbr()
+        return APIStockUtil.fetchSearch(abbreviation)
             .then(
-                (stocks) => dispatch(receiveStocks(stocks)))
+                (abbr) => dispatch(receiveSearchResults(abbr)))
     }   
 }

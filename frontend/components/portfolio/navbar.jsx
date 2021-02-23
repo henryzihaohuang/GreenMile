@@ -1,4 +1,5 @@
 import React from 'react';
+import SearchContainer from './search_container';
 
 class Navbar extends React.Component{
     constructor(props){
@@ -21,14 +22,7 @@ class Navbar extends React.Component{
                     <a><img className="logo-img" src={window.logoURL} /></a>
                 </span>
 
-                <span className="searchbar-block">
-                    <input
-                        type="text"
-                        className="searchbar-element"
-                        placeholder="Search"
-                        results="0"
-                    />
-                </span>
+                <SearchContainer />
 
                 <span className="portfolio-nav-bar-block">
                     <ul>

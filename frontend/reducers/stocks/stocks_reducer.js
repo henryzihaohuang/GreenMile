@@ -2,7 +2,7 @@ import {
     RECEIVE_COMPANY_INFO,
     RECEIVE_INTRADAY_INFO,
     RECEIVE_PRICE_HISTORY,
-    RECEIVE_STOCK_ABBREVIATIONS
+    RECEIVE_SEARCH_RESULTS
 } from '../../actions/stock';
 
 
@@ -30,10 +30,9 @@ const stocksReducer = (state= {}, action) => {
             debugger
             return newState;
 
-        case RECEIVE_STOCK_ABBREVIATIONS:
-            nextState['prices'] = action.prices;
-            nextState['stocks'] = action.stocks;
-            return newState;
+        case RECEIVE_SEARCH_RESULTS:
+            nextState['search'] = action.search;
+            return nextState;
         
         default:
             return state;

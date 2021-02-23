@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } 
 
     // testing//
+    window.fetchSearch = APIStockUtil.fetchSearch;
     window.getState = store.getState;
     window.dispatch = store.dispatch;
     

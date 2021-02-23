@@ -12,7 +12,7 @@ class HomeBlockOne extends React.Component {
                 <div className="block-content-wrapper">
                     <div className="block-content-block">
                         <div className="block-content-video"> 
-                            <video src="https://cdn.robinhood.com/assets/superbowl/superbowl.mp4" autoplay controlslist="nodownload nofullscreen noremoteplayback" loop muted playsinline preload="auto" />
+                            <video src="https://cdn.robinhood.com/assets/superbowl/superbowl.mp4" autoPlay controlsList="nodownload nofullscreen noremoteplayback" loop muted playsInLine preload="auto" />
                         </div>
                         <div className="block-content-text">
                             We are all investors. 
