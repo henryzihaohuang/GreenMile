@@ -16,7 +16,6 @@ class Search extends React.Component{
 
     handleChange(e){
         return (e) => {
-            debugger
             this.setState({searchInput:e.target.value})
 
             this.props.fetchSearch(e.target.value)
@@ -29,19 +28,17 @@ class Search extends React.Component{
     }
 
     searchDropdown(){
-        // debugger
         if (this.state.searchResult.length===0) { 
             return <div> Sorry, can't find any results for that! Try another search </div> 
         } else { 
             this.state.searchResult.map((searchResult) => {
+                return (
+                    <ul>
+                        <li>{searchResult.symbol}</li>
 
-            return (
-                <div>
-                    <div>{searchResult.symbol}</div>
-
-                    <div>{searchResult.securityName}</div>
-                </div>
-            )
+                        <li>{searchResult.securityName}</li>
+                    </ul>
+                )
            })
         }
     }
