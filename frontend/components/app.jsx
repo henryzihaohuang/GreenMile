@@ -9,7 +9,6 @@ import ModalContainer from '../components/modal/modal_container';
 import Graph from './portfolio/graph';
 
 const App = ({state}) => {
-    console.log(HomepageContainer);
     return (
         <div>
                 <ModalContainer />

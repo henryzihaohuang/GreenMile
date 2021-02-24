@@ -14,22 +14,26 @@ class Search extends React.Component{
         this.searchDropdown = this.searchDropdown.bind(this)
     }
 
-    handleChange(){
+    handleChange(e){
         return (e) => {
-            this.setState({ 
-                searchInput: e.target.value, 
-                searchResult: () => this.props.fetchSearch(this.state.searchInput)
+            debugger
+            this.setState({searchInput:e.target.value})
+
+            this.props.fetchSearch(e.target.value)
+                .then((res)=>{
+                    this.setState({
+                            searchResult: res.abbr
+                    })
             })
         }
-        debugger
     }
 
     searchDropdown(){
-        if (this.state.searchResult.length === 0) { 
-            return <div className='search-result-error'> Sorry, can't find any results for that! Try another search </div> 
-        }
-
-        return this.state.searchResult['responseJSON'].map((searchResult) => {
+        // debugger
+        if (this.state.searchResult.length===0) { 
+            return <div> Sorry, can't find any results for that! Try another search </div> 
+        } else { 
+            this.state.searchResult.map((searchResult) => {
 
             return (
                 <div>
@@ -38,7 +42,8 @@ class Search extends React.Component{
                     <div>{searchResult.securityName}</div>
                 </div>
             )
-        })
+           })
+        }
     }
 
     render(){

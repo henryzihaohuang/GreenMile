@@ -53,10 +53,9 @@ export const fetchCompanyNews = (abbreviation) => {
 
 export const fetchSearch = (abbreviation) => {
     const key = "Tsk_6488ea780c834facbb5e1124dd77e34a";
+    debugger
     return $.ajax({
         method: 'GET',
         url: `https://sandbox.iexapis.com/stable/search/${abbreviation}?token=${key}`
     })
 }
-
-

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Search from './search';
-import {fetchSearch} from  '../../actions/stock';
+import { fetchSearch } from  '../../actions/stock';
 
 const mStP = (state, ownProps) => {
     return {
@@ -8,6 +8,7 @@ const mStP = (state, ownProps) => {
 };
 
 const mDtP = (dispatch) => {
+    debugger
     return {
         fetchSearch: (abbreviation) => dispatch(fetchSearch(abbreviation))
     }
