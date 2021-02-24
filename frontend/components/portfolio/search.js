@@ -1,4 +1,5 @@
 import React from 'react';
+import { ReactReduxContext } from 'react-redux';
 
 class Search extends React.Component{
 
@@ -28,18 +29,17 @@ class Search extends React.Component{
     }
 
     searchDropdown(){
-        if (this.state.searchResult.length===0) { 
+        if (this.state.searchResult.length === 0) { 
             return <div> Sorry, can't find any results for that! Try another search </div> 
         } else { 
-            this.state.searchResult.map((searchResult) => {
+                this.state.searchResult.map((searchResult) => {
                 return (
-                    <ul>
-                        <li>{searchResult.symbol}</li>
-
-                        <li>{searchResult.securityName}</li>
-                    </ul>
-                )
-           })
+                    <div>
+                        <p>{searchResult.symbol}</p>
+                        <p>{searchResult.securityName}</p>
+                    </div>)
+                }
+            )
         }
     }
 

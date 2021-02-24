@@ -8,14 +8,8 @@ class Portfolio extends React.Component{
     constructor(props){
         super(props)
 
-        this.state = {
-            nextImg: false
-        }
     }
 
-    handleClick() {
-        this.setState({ nextImg: !this.state.nextImg })
-    }
 
     componentDidMount() {
         this.props.fetchHistory("GME", "1y");

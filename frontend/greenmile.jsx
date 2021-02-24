@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } 
 
     // testing//
-    window.fetchSearch = APIStockUtil.fetchSearch;
+    
     window.getState = store.getState;
     window.dispatch = store.dispatch;
     
@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.fetchIntradayInfo = APIStockUtil.fetchIntradayInfo;
     window.fetchPriceHistory = APIStockUtil.fetchPriceHistory;
     window.fetchCompanyNews = APIStockUtil.fetchCompanyNews;
+    window.fetchSearch = APIStockUtil.fetchSearch;
 
     // testing//
     
