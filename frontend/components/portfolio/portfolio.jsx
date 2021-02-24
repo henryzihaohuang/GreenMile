@@ -5,11 +5,6 @@ import Sidebar from './sidebar';
 
 
 class Portfolio extends React.Component{
-    constructor(props){
-        super(props)
-
-    }
-
 
     componentDidMount() {
         this.props.fetchHistory("GME", "1y");
@@ -32,7 +27,7 @@ class Portfolio extends React.Component{
                 <section className="portfolio-main-wrapper">
                     <Mainblock data={GME}/>
                     <Sidebar 
-                        GME={GME} />
+                        data={GME} />
                 </section>
 
             </section>

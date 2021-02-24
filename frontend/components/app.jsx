@@ -6,7 +6,7 @@ import PortfolioContainer from './portfolio/portfolio_container';
 import { Route } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../utils/route_utils';
 import ModalContainer from '../components/modal/modal_container';
-import StocksContainer from '../components/stocks/stocks_container';
+import StocksShowContainer from '../components/stocks/stocks_container';
 import Graph from './portfolio/graph';
 
 const App = ({state}) => {
@@ -18,7 +18,7 @@ const App = ({state}) => {
                 <AuthRoute exact path="/login" component={LogInContainer} />
                 <AuthRoute exact path="/signup" component={SignUpContainer} />
                 <ProtectedRoute exact path="/portfolio" component={PortfolioContainer} />
-                <ProtectedRoute exact path="/stock/:abbreviation" component={StocksContainer} />
+                <ProtectedRoute exact path="/stock/:abbreviation" component={StocksShowContainer} />
         </div>
     )
 };

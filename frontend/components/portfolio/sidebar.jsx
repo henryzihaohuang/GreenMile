@@ -25,7 +25,7 @@ class Sidebar extends React.Component {
 
                                 <li className="watchlist-stock-item">
                                     <span>GME</span>
-                                    <span><WatchlistGraph data={this.props.GME} /></span>
+                                    <span><WatchlistGraph data={this.props.data} /></span>
                                     {/* <span>
                                         <span>numbers</span>
                                         <span>numbers</span>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactReduxContext } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 
 class Search extends React.Component{
 
@@ -32,14 +32,17 @@ class Search extends React.Component{
         if (this.state.searchResult.length === 0) { 
             return <div> Sorry, can't find any results for that! Try another search </div> 
         } else { 
-                this.state.searchResult.map((searchResult) => {
+            return (
+                this.state.searchResult.map((result, idx) => {
                 return (
                     <div>
-                        <p>{searchResult.symbol}</p>
-                        <p>{searchResult.securityName}</p>
+                        <Redirect to={`/stock/${result.symbol}`} 
+                        symbol={result.symbol}/>
+                        <p key={idx}> {result.symbol}</p>
+                        <p key={idx}> {result.securityName}</p>
                     </div>)
                 }
-            )
+            ))
         }
     }
 
