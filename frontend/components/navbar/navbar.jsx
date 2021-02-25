@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchContainer from './search_container';
+import SearchContainer from '../portfolio/search_container';
 
 class Navbar extends React.Component{
     constructor(props){

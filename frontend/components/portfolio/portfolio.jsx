@@ -1,5 +1,5 @@
 import React from 'react';
-import NavbarContainer from './navbar_container';
+import NavbarContainer from '../navbar/navbar_container';
 import Mainblock from './mainblock';
 import Sidebar from './sidebar';
 
@@ -25,9 +25,8 @@ class Portfolio extends React.Component{
                 <NavbarContainer />
 
                 <section className="portfolio-main-wrapper">
-                    <Mainblock data={GME}/>
-                    <Sidebar 
-                        data={GME} />
+                    <Mainblock data={GME} companyName="Balance" />
+                    <Sidebar data={GME} />
                 </section>
 
             </section>

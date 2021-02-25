@@ -1,9 +1,11 @@
 import { connect } from 'react-redux';
 import { fetchPriceHistory,
-         fetchCompanyInfo } from '../../actions/stock';
+         fetchCompanyInfo,
+         fetchIntradayInfo } from '../../actions/stock';
 import StocksShow from "./stocks_show";
 
 const mStP = (state, ownProps) => {
+    debugger
     return {
         entities: state.entities
     }
@@ -12,7 +14,9 @@ const mStP = (state, ownProps) => {
 const mDtP = (dispatch) => {
     return {
         fetchHistory: (abbreviation, timeRange) => dispatch(fetchPriceHistory(abbreviation, timeRange)),
-        fetchCompany: (abbreviation) => dispatch(fetchCompanyInfo(abbreviation))
+        fetchCompany: (abbreviation) => dispatch(fetchCompanyInfo(abbreviation)),
+        fetchIntradayInfo: (abbreviation) => dispatch(fetchIntradayInfo(abbreviation))
+
     }
 };
 

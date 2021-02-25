@@ -10,7 +10,9 @@ class Mainblock extends React.Component {
     render () {
         if (this.props.companyName === undefined){
             this.props.companyName = "Balance"
-        }
+        } 
+
+
         return(
             <div className="portfolio-main-block">
                 <div className="portfolio-graph-block">
