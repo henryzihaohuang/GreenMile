@@ -8,7 +8,6 @@ const newsReducer = (state = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_NEWS:
-            debugger
             return action.news;
             
         default:

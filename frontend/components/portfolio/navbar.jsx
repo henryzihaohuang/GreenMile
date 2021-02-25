@@ -18,28 +18,28 @@ class Navbar extends React.Component{
     render() {
         return(
             <section className="portfolio-nav-bar">
-                <span>
+                <div>
                     <a><img className="logo-img" src={window.logoURL} /></a>
-                </span>
+                </div>
 
                 <SearchContainer />
 
-                <span className="portfolio-nav-bar-block">
+                <div className="portfolio-nav-bar-block">
                     <ul>
-                        <span className="portfolio-nav-bar-element">
+                        <div className="portfolio-nav-bar-element">
                             <a className="portfolio-nav-bar-element" href="https://www.linkedin.com/in/zihaohuang/"><li>LinkedIn</li></a>
-                        </span>
-                        <span className="portfolio-nav-bar-element">
+                        </div>
+                        <div className="portfolio-nav-bar-element">
                             <a className="portfolio-nav-bar-element" href="https://github.com/henryzihaohuang"><li>GitHub</li></a>
-                        </span>
-                        <span className="portfolio-nav-bar-element-wip">
+                        </div>
+                        <div className="portfolio-nav-bar-element-wip">
                             <li>Account</li>
-                        </span>
-                        <span className="portfolio-nav-bar-element">
-                            <li><span onClick={this.handleSubmit}>Logout</span></li>
-                        </span>
+                        </div>
+                        <div className="portfolio-nav-bar-element">
+                            <li><div onClick={this.handleSubmit}>Logout</div></li>
+                        </div>
                     </ul>
-                </span>
+                </div>
             </section>
         )
     }

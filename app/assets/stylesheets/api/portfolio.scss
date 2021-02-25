@@ -58,41 +58,6 @@
 }
 
 
-//---searchbar
-.searchbar-element{
-    color:#b4bdc2;
-    // margin-right: 100px;
-    width: 600px;
-    padding:0;
-    height: 33px;
-    background-color:transparent;
-
-    background-image: image-url('search.png');
-    background-repeat: no-repeat;
-    background-position: left center;
-    background-size:auto;
-
-    border-style:solid;
-    
-    border-width:1px;
-    border-color: rgb(70, 69, 69);
-    // outline:lightgrey;
-    border-radius: 4px;
-    text-indent: 34px;
-}
-
-.searchbar-element:hover {
-    -webkit-transition: all 0.5s ease;
-    background-color:#2e3337;
-}
-
-.searchbar-element:focus {
-    outline:none;
-    -webkit-transition: all 0.5s ease;
-    background-color:#2e3337;
-}
-
-
 //main block
 
 .portfolio-main-wrapper{

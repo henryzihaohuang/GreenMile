@@ -4,11 +4,11 @@ import { fetchSearch } from  '../../actions/stock';
 
 const mStP = (state, ownProps) => {
     return {
+        entities: state.entities
     }
 };
 
 const mDtP = (dispatch) => {
-    debugger
     return {
         fetchSearch: (abbreviation) => dispatch(fetchSearch(abbreviation))
     }

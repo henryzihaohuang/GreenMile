@@ -7,7 +7,6 @@ class News extends React.Component{
 
     componentDidMount(){
         this.props.fetchNews("GME");
-        debugger
     }
 
     render(){
@@ -25,13 +24,13 @@ class News extends React.Component{
         return(
 
         <section className="portfolio-news-wrapper">
-            <span className="portfolio-news-element-header">
+            <div className="portfolio-news-element-header">
                 <span>News</span>
-            </span>
+            </div>
 
-            <span className="portfolio-news-block">
-                <span className="portfolio-news-element">
-                    <span className="portfolio-news-element-body">
+            <div className="portfolio-news-block">
+                <div className="portfolio-news-element">
+                    <div className="portfolio-news-element-body">
                         <span className="news-source-text">
                             {news[0].source}
                         </span>
@@ -41,17 +40,17 @@ class News extends React.Component{
                         <span className="news-summary-text">
                             {news[0].summary}
                         </span>
-                    </span>
-                    <span className="portfolio-news-element-img">
-                        <span>
+                    </div>
+                    <div className="portfolio-news-element-img">
+                        <div>
                                 <img className="news-img" src={img} />
-                        </span>
-                    </span>
-                </span>
+                        </div>
+                    </div>
+                </div>
 
 
-                <span className="portfolio-news-element">
-                    <span className="portfolio-news-element-body">
+                <div className="portfolio-news-element">
+                    <div className="portfolio-news-element-body">
                         <span className="news-source-text">
                             {news[1].source}
                         </span>
@@ -61,17 +60,17 @@ class News extends React.Component{
                         <span className="news-summary-text">
                             {news[1].summary}
                         </span>
-                    </span>
-                    <span className="portfolio-news-element-img">
-                        <span>
+                    </div>
+                    <div className="portfolio-news-element-img">
+                        <div>
                                 <img className="news-img" src={img1} />
-                        </span>
-                    </span>
-                </span>
+                        </div>
+                    </div>
+                </div>
 
 
-                <span className="portfolio-news-element">
-                    <span className="portfolio-news-element-body">
+                <div className="portfolio-news-element">
+                    <div className="portfolio-news-element-body">
                         <span className="news-source-text">
                             {news[2].source}
                         </span>
@@ -81,14 +80,14 @@ class News extends React.Component{
                         <span className="news-summary-text">
                             {news[2].summary}
                         </span>
-                    </span>
-                    <span className="portfolio-news-element-img">
-                        <span>
+                    </div>
+                    <div className="portfolio-news-element-img">
+                        <div>
                                 <img className="news-img" src={img2} />
-                        </span>
-                    </span>
-                </span>
-            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         )
     }

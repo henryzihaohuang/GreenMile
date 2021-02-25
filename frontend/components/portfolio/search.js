@@ -1,22 +1,28 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class Search extends React.Component{
-
     constructor(props){
         super(props);
 
         this.state={
             searchInput:"",
-            searchResult: []
+            searchResult: [],
+            searching: true,
+            renderResults: "hidden"
         }
 
         this.handleChange = this.handleChange.bind(this)
         this.searchDropdown = this.searchDropdown.bind(this)
     }
 
-    handleChange(e){
+    handleChange(){
         return (e) => {
+            this.state.searching = true;
+            if (this.state.searching){
+                this.setState({ renderResults: "search-results-dropdown"})
+            }
+
             this.setState({searchInput:e.target.value})
 
             this.props.fetchSearch(e.target.value)
@@ -29,27 +35,39 @@ class Search extends React.Component{
     }
 
     searchDropdown(){
-        if (this.state.searchResult.length === 0) { 
-            return <div> Sorry, can't find any results for that! Try another search </div> 
+        if (Object.keys(this.state.searchResult).length === 0) { 
+            return <div className="search-not-found"> We were unable to find any results for your search.</div> 
         } else { 
             return (
-                this.state.searchResult.map((result, idx) => {
-                return (
-                    <div>
-                        <Redirect to={`/stock/${result.symbol}`} 
-                        symbol={result.symbol}/>
-                        <p key={idx}> {result.symbol}</p>
-                        <p key={idx}> {result.securityName}</p>
-                    </div>)
-                }
-            ))
+
+                <div className="search-results-dropdown">
+                    <span className="search-stocks-header">Stocks</span>
+                
+                {this.state.searchResult.map((searchResults, idx) => {
+                    return (
+                        <div className="search-return">
+                            <Link to={{
+                                pathname: `/stock/${searchResults.symbol}`,
+                                state: {abbreviation: searchResults.symbol, 
+                                name: searchResults.securityName}} }
+                                className='search-return-element' 
+                                key={idx}>
+
+                                <span className="search-return-element-symbol" > {searchResults.symbol}</span>
+                                <span className="search-return-element-company"> {searchResults.securityName}</span>
+                            </Link>
+                        </div>)
+                })}
+
+                </div>
+                
+            )
         }
     }
 
     render(){
-        debugger
         return(
-            <div>
+            <div className="">
                 <div className="searchbar-block">
                     <input
                         type="text"
@@ -59,15 +77,12 @@ class Search extends React.Component{
                     />
                 </div>
 
-                <div>
-                    <div>Stocks</div>
-                     <div>
+                <div className={`search-results-dropdown {${this.state.renderResults}`}>
                          {this.searchDropdown()}
-                     </div>
-                 </div>
+                </div>
             </div>
         )
     }
 }
 
-export default Search
+export default Search;

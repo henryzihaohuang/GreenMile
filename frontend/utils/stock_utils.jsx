@@ -5,7 +5,6 @@ const sandbox_key = window.cloudAPIKey;
 export const fetchCompany = (abbreviation) => {
 
     const key = "Tsk_6488ea780c834facbb5e1124dd77e34a";
-    // debugger
     return $.ajax ({
         method: "GET",
         url: `https://sandbox.iexapis.com/stable/stock/${abbreviation}/company?token=${key}`
@@ -50,7 +49,7 @@ export const fetchCompanyNews = (abbreviation) => {
 //     })
 // }
 
-
+// sandbox
 export const fetchSearch = (abbreviation) => {
     const key = "Tsk_6488ea780c834facbb5e1124dd77e34a";
     debugger
@@ -59,3 +58,12 @@ export const fetchSearch = (abbreviation) => {
         url: `https://sandbox.iexapis.com/stable/search/${abbreviation}?token=${key}`
     })
 }
+
+// export const fetchSearch = (abbreviation) => {
+//     const key = "pk_a93aad99b56b4f458cfe19b26d8149c3";
+//     debugger
+//     return $.ajax({
+//         method: 'GET',
+//         url: `https://cloud.iexapis.com/stable/search/${abbreviation}?token=${key}`
+//     })
+// }

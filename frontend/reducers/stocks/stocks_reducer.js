@@ -27,7 +27,6 @@ const stocksReducer = (state= {}, action) => {
             const key = Object.keys(action.prices)[0];
 
             const newState = Object.assign({}, state, { [key]: Object.values(action.prices)[0]});
-            debugger
             return newState;
 
         case RECEIVE_SEARCH_RESULTS:

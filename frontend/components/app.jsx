@@ -6,7 +6,7 @@ import PortfolioContainer from './portfolio/portfolio_container';
 import { Route } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../utils/route_utils';
 import ModalContainer from '../components/modal/modal_container';
-import StocksShowContainer from '../components/stocks/stocks_container';
+import StocksShowContainer from './stock/stocks_container';
 import Graph from './portfolio/graph';
 
 const App = ({state}) => {

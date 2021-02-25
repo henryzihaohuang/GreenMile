@@ -4,24 +4,30 @@ import PopularLists from './popular_lists';
 import Graph from './graph';
 
 class Mainblock extends React.Component {
+
+
+    
     render () {
+        if (this.props.companyName === undefined){
+            this.props.companyName = "Balance"
+        }
         return(
-            <span className="portfolio-main-block">
-                <span className="portfolio-graph-block">
-                    <span className="portfolio-balance-block">
-                        <span className="balance-element">GameStop</span>
-                        <span className="balance-element">$10,000</span>
-                        <span>+$30.60 (+2.24%) <span className="today-afterhours-text-element">Today</span>
-                        </span>
-                        <span>-$0.29 (-0.02%) <span className="today-afterhours-text-element">After Hours</span></span>
-                        <span className="graph-img">
+            <div className="portfolio-main-block">
+                <div className="portfolio-graph-block">
+                    <div className="portfolio-balance-block">
+                        <div className="balance-element">{this.props.companyName}</div>
+                        <div className="balance-element">$10,000</div>
+                        <div>+$30.60 (+2.24%) <div className="today-afterhours-text-element">Today</div>
+                        </div>
+                        <div>-$0.29 (-0.02%) <div className="today-afterhours-text-element">After Hours</div></div>
+                        <div className="graph-img">
                             <div className='portfolio-chart-block'>
                                 <Graph data={this.props.data} className="main-graph" />
                             </div>
-                        </span>
+                        </div>
                         <br />
-                    </span>
-                    <span className="time-bar-block">
+                    </div>
+                    <div className="time-bar-block">
                         <ul>
                             <span className="time-bar-elements">
                                 <li>1D</li>
@@ -42,20 +48,20 @@ class Mainblock extends React.Component {
                                 <li>ALL</li>
                             </span>
                         </ul>
-                    </span>
-                </span>
+                    </div>
+                </div>
 
                 <section className="portfolio-buying-power-block">
-                    <span className="buying-power">
+                    <div className="buying-power">
                         <h2>Buying Power</h2>
-                    </span>
-                    <span className="balance"><p>$10,000</p></span>
+                    </div>
+                    <div className="balance"><p>$10,000</p></div>
                 </section>
 
                 <PopularLists />
                 
                 <NewsContainer />
-            </span>
+            </div>
             )
     }
 }
