@@ -21,6 +21,7 @@ class Api::UsersController < ApplicationController
 
 
     def update
+        debugger
         @user = current_user
 
         new_balance = current_user.balance + params[:amount].to_f
