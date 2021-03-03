@@ -18,6 +18,17 @@ class Api::UsersController < ApplicationController
         @user = current_user
         render :show
     end
+
+
+    def update
+        @user = current_user
+
+        new_balance = current_user.balance + params[:amount].to_f
+
+        current_user.update(balance: new_balance)
+
+        render :show
+    end
     
 
     private 

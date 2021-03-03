@@ -12,6 +12,7 @@ class DepositDisclosure extends React.Component {
     }
 
     handleSubmit(e) {
+        debugger
         e.preventDefault();
 
         this.props.addDeposit(this.state.amount, this.props.currentUser.balance)
