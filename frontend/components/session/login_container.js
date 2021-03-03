@@ -3,7 +3,6 @@ import { login, receiveErrors } from '../../actions/session';
 import SessionForm from './session_form';
 
 const mStP = (state, ownProps) => {
-    // debugger
     return {
         user: {
             email: "",

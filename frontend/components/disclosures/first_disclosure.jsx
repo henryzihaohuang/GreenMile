@@ -1,12 +1,8 @@
 import React from 'react';
 
 class FirstDisclosure extends React.Component{
-    constructor(props){
-        super(props)
-    }
-
     render () {
-        // debugger
+        debugger
         return(
             <span className="modal-content">
                 <span>

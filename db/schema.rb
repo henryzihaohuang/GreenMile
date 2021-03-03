@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_19_195749) do
+ActiveRecord::Schema.define(version: 2021_03_02_221417) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "portfolios", force: :cascade do |t|
     t.integer "user_id", null: false
@@ -29,6 +32,17 @@ ActiveRecord::Schema.define(version: 2021_01_19_195749) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "transactions", force: :cascade do |t|
+    t.string "abbreviation", null: false
+    t.integer "user_id", null: false
+    t.integer "shares", null: false
+    t.string "order", null: false
+    t.float "price", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_transactions_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "first_name", null: false
     t.string "last_name", null: false
@@ -37,6 +51,7 @@ ActiveRecord::Schema.define(version: 2021_01_19_195749) do
     t.string "password_digest", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "balance", default: 10000.0
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["session_token"], name: "index_users_on_session_token", unique: true
   end

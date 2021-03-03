@@ -92,16 +92,6 @@
 
 }
 
-
-.portfolio-buying-power-block {
-    padding:30px;
-    width:610px;
-    flex-direction:column;
-    justify-content: flex-start;align-items: center;
-    border-bottom:1px solid rgb(70, 69, 69);
-    margin-left:-40px;
-}
-
 .balance-element {
     
     font-size: 33px;
@@ -158,10 +148,19 @@
 }
 
 .portfolio-buying-power-block{
-    
     display:flex;
     flex-direction: row;
     justify-content: space-between;
+
+    padding:30px;
+    width:610px;
+    border-bottom:1px solid rgb(70, 69, 69);
+    margin-left:-40px;
+}
+
+.portfolio-buying-power-block:hover{
+    color:#00C810;
+    cursor:pointer;
 }
 
 .portfolio-balance-block{

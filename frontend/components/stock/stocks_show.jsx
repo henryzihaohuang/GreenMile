@@ -2,20 +2,24 @@ import React from 'react';
 import NavbarContainer from '../navbar/navbar_container';
 import Mainblock from '../portfolio/mainblock';
 import Sidebar from '../portfolio/sidebar';
+import Buy from './buy';
+import Sell from './sell';
 
+//TO DO: figure out webpack plugin error
+// import { Spinner } from 'react-loading-io';
 
 class StocksShow extends React.Component {
     constructor(props){
         super(props)
 
         this.state={
-            companyInfo:"",
-            priceInfo:"",
+            companyInfo: "",
+            priceInfo: "",
             loading:true
-        }
+        };
 
         this.symbol = this.props.match.params['abbreviation']
-    }
+    };
 
     componentDidMount() {
         this.props.fetchCompany(this.symbol)
@@ -26,26 +30,38 @@ class StocksShow extends React.Component {
             .then((prices) => {
                 this.setState({
                     loading: false,
-                    priceInfo:prices})})
+                    priceInfo: prices})})
+    };
 
-        // this.props.fetchHistory(this.symbol, '5y')
-        // this.props.fetchCompany(this.symbol)
-    }
-
+    
 
     render() {
+        const tabArr = [
+            { title: "Buy", content: <Buy /> },
+            { title: "Sell", content:<Sell /> },
+        ]
+
+
         //TO DO: setTimeout for loading animation
         if (this.state.loading) {
-            return (<p>Loading</p>);
+            // return (<div><Spinner size={30} color='#47c807' speed={1.03}/></div>);
+            return (<div>Loading</div>);
         };
-       
-        const stock = this.props.entities.stock[this.symbol];
+
         return (
             <section className="portfolio-wrapper">
                 <NavbarContainer />
                 <section className="portfolio-main-wrapper">
-                    <Mainblock data={stock['chart']} companyName={this.state.companyInfo}/>
-                    <Sidebar data={stock['chart']}/>
+                    <Mainblock 
+                        openModal={this.props.openModal} 
+                        data = {this.state.priceInfo.prices[this.symbol]['chart']} 
+                        companyName = {this.state.companyInfo.company.companyName}
+                    />
+                    <Sidebar 
+                        tabs = {tabArr} 
+                        data={this.state.priceInfo.prices[this.symbol]['chart']} 
+                        symbol = {this.symbol}
+                    />
                 </section>
             </section>
         )

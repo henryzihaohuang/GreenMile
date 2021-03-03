@@ -5,7 +5,7 @@ import {openModal} from '../../actions/modal';
 
 const mStP = (state, ownProps) => {
     return {
-        currentUser: state.entities.session.currentUser
+        currentUser: state.session.currentUser
     }
 };
 

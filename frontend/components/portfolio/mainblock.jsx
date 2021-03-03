@@ -4,14 +4,10 @@ import PopularLists from './popular_lists';
 import Graph from './graph';
 
 class Mainblock extends React.Component {
-
-
-    
     render () {
         if (this.props.companyName === undefined){
             this.props.companyName = "Balance"
         } 
-
 
         return(
             <div className="portfolio-main-block">
@@ -53,7 +49,7 @@ class Mainblock extends React.Component {
                     </div>
                 </div>
 
-                <section className="portfolio-buying-power-block">
+                <section onClick={() => this.props.openModal('deposit')} className="portfolio-buying-power-block">
                     <div className="buying-power">
                         <h2>Buying Power</h2>
                     </div>

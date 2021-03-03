@@ -1,5 +1,6 @@
 import React from 'react';
-import SearchContainer from '../portfolio/search_container';
+import SearchContainer from './search_container';
+import { Link } from 'react-router-dom';
 
 class Navbar extends React.Component{
     constructor(props){
@@ -8,18 +9,18 @@ class Navbar extends React.Component{
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-
     handleSubmit(e) {
         e.preventDefault();
         this.props.action().then(() => this.props.history.push('/'));
     }
 
+    //mouse leave event listener and focus event listener 
 
     render() {
         return(
             <section className="portfolio-nav-bar">
                 <div>
-                    <a><img className="logo-img" src={window.logoURL} /></a>
+                    <Link to="/portfolio"><img className="logo-img" src={window.logoURL} /></Link>
                 </div>
 
                 <SearchContainer />

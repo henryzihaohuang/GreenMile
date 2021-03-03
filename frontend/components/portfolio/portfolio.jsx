@@ -3,13 +3,11 @@ import NavbarContainer from '../navbar/navbar_container';
 import Mainblock from './mainblock';
 import Sidebar from './sidebar';
 
-
 class Portfolio extends React.Component{
 
     componentDidMount() {
         this.props.fetchHistory("GME", "1y");
     }
-
 
     render() {
            
@@ -21,14 +19,15 @@ class Portfolio extends React.Component{
             
         return(
             <section className="portfolio-wrapper">
-
                 <NavbarContainer />
-
                 <section className="portfolio-main-wrapper">
-                    <Mainblock data={GME} companyName="Balance" />
-                    <Sidebar data={GME} />
+                    <Mainblock 
+                        openModal={this.props.openModal} 
+                        data={GME} 
+                        companyName="Balance" 
+                        addFunds={this.props.addFunds}/>
+                    <Sidebar props = {this.props} data={GME} />
                 </section>
-
             </section>
         )
     }

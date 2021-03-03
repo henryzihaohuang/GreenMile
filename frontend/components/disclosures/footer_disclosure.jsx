@@ -1,10 +1,6 @@
 import React from 'react';
 
 class FooterDisclosure extends React.Component {
-    constructor(props) {
-        super(props)
-    }
-
     render() {
         return (
             <span className="footer-modal-content">

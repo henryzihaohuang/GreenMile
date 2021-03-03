@@ -13,7 +13,6 @@ const App = ({state}) => {
     return (
         <div>
                 <ModalContainer />
-                
                 <Route exact path="/" render={(props)=> <HomepageContainer {...props}/>} />
                 <AuthRoute exact path="/login" component={LogInContainer} />
                 <AuthRoute exact path="/signup" component={SignUpContainer} />

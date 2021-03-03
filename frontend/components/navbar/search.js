@@ -12,8 +12,9 @@ class Search extends React.Component{
             renderResults: "hidden"
         }
 
-        this.handleChange = this.handleChange.bind(this)
-        this.searchDropdown = this.searchDropdown.bind(this)
+        this.handleChange = this.handleChange.bind(this);
+        this.searchDropdown = this.searchDropdown.bind(this);
+        
     }
 
     handleChange(){
@@ -40,19 +41,13 @@ class Search extends React.Component{
         } else { 
             return (
 
-                <div className="search-results-dropdown">
+                <div>
                     <span className="search-stocks-header">Stocks</span>
                 
                 {this.state.searchResult.map((searchResults, idx) => {
                     return (
                         <div className="search-return">
-                            <Link to={{
-                                pathname: `/stock/${searchResults.symbol}`,
-                                state: {abbreviation: searchResults.symbol, 
-                                name: searchResults.securityName}} }
-                                className='search-return-element' 
-                                key={idx}>
-
+                            <Link to={`/stock/${searchResults.symbol}`} className='search-return-element' key={idx}>
                                 <span className="search-return-element-symbol" > {searchResults.symbol}</span>
                                 <span className="search-return-element-company"> {searchResults.securityName}</span>
                             </Link>
@@ -63,6 +58,10 @@ class Search extends React.Component{
                 
             )
         }
+    };
+
+    closeDropdown() {
+        document.getElementsByClassName("search-results-dropdown")[0].style.display = "none";
     }
 
     render(){
@@ -77,7 +76,9 @@ class Search extends React.Component{
                     />
                 </div>
 
-                <div className={`search-results-dropdown {${this.state.renderResults}`}>
+                <div 
+                    className={`search-results-dropdown ${this.state.renderResults}`}
+                    onBlur={()=>{this.closeDropdown()}}>
                          {this.searchDropdown()}
                 </div>
             </div>

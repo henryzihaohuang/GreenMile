@@ -11,7 +11,8 @@ export const receiveCurrentUser = currentUser => ({
         firstName: currentUser.first_name,
         lastName: currentUser.last_name,
         email: currentUser.email,
-        password: currentUser.password
+        password: currentUser.password,
+        balance: currentUser.balance
     }
 });
 
@@ -20,7 +21,6 @@ const logoutCurrentUser = () => ({
 })
 
 export const receiveErrors = errors => {
-    // debugger
     return {
             type: RECEIVE_ERRORS,
             errors
@@ -28,13 +28,12 @@ export const receiveErrors = errors => {
 };
 
 export const signup = (formUser) => {
-    // debugger
-
     const translatedUser = {
         first_name: formUser.firstName,
         last_name: formUser.lastName,
         email: formUser.email,
-        password: formUser.password
+        password: formUser.password,
+        balance: formUser.balance
     }
 
     return (dispatch) => {

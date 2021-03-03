@@ -3,11 +3,6 @@ import { Link } from 'react-router-dom';
 import HomeBlockOneContainer from './hompage-block-1';
 
 class Homepage extends React.Component {
-    
-    constructor(props){
-        super(props)
-    }
-
     render(){
             return (
             <section className="homepage-wrapper">

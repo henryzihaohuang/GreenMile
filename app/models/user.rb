@@ -8,16 +8,18 @@ class User < ApplicationRecord
     validates :password, length: { minimum: 10, 
     message: "Your password must be at least 10 characters." 
     }, allow_nil: true
-
-    # specific sign-up error messages
-    
-    
-    #  message: "Your password must be at least 10 characters."
-    
-
     
     after_initialize :ensure_session_token
 
+    has_one :portfolio,
+        primary_key: :id,
+        foreign_key: "user_id",
+        class_name: "Portfolio"
+
+    has_many :transactions,
+        primary_key: :id,
+        foreign_key: "user_id",
+        class_name: "Transaction"
     
     attr_reader :password
 
