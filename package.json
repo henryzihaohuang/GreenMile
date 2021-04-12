@@ -9,7 +9,6 @@
     "eslint": "^7.21.0",
     "lint": "eslint ./",
     "lint-staged": "^10.5.4",
-    "lint:fix": "eslint ./ --fix",
     "node-iex-cloud": "^2.0.31",
     "precommit": "lint-staged",
     "react": "^16.8.3",
