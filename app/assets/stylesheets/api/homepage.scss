@@ -104,7 +104,7 @@
 .first-section-block {
 
     width: 600px;
-    height: 100%;
+    height: 90%;
     margin-top: 40px;
     display: flex;
     flex-direction: row;
@@ -178,6 +178,7 @@
 
 .homepage-video{
   height: 86%;
+  width: 653px;
   background-color: transparent;
   position: absolute;
   z-index:0;
@@ -281,8 +282,8 @@
     font-size:18px;
 }
 
-.block-content-wrapper{
-    
+.block-content-header{
+    font-size:48px;
 }
 .block-content-block{
     display:flex;
@@ -294,9 +295,9 @@
 }
 
 .block-content-text{
-    display:flex;
+    display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
+    margin-left: 10vh;
 }
