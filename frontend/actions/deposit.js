@@ -2,6 +2,7 @@ import * as DepositAPIUtil from '../utils/deposit_util';
 export const UPDATE_BALANCE = 'UPDATE_BALANCE';
 
 const updateBalance = (deposit) => {
+    debugger
     return {
         type: UPDATE_BALANCE,
         deposit
@@ -10,8 +11,6 @@ const updateBalance = (deposit) => {
 
 export const addDeposit = (amount, userId) => dispatch => {
     debugger
-    return (dispatch) => {
-        return DepositAPIUtil.addDeposit(amount, userId)
+    return DepositAPIUtil.addDeposit(amount, userId)
         .then((data) => (dispatch(updateBalance(data))))
-    }
 };

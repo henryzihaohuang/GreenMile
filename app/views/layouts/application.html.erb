@@ -21,41 +21,17 @@
 
     <script type="text/javascript">
       window.cloudAPIKey = "<%= Rails.application.credentials.iexcloud[:api_key] %>"
-    </script>
-
-
-    <script type="text/javascript">
+      window.sandboxAPIKey = "<%= Rails.application.credentials.iexcloud[:sandbox_api_key] %>"
       window.searchURL = "<%= image_url('search.png') %>";
-    </script>
-
-
-   <script type="text/javascript">
       window.videoURL = "<%= image_url('homepage-video.mp4') %>";
-    </script>
-
-    <script type="text/javascript">
       window.logoURL = "<%= image_url('forest-badge.png') %>";
-    </script>
-
-    <script type="text/javascript">
       window.blackinfoURL = "<%= image_url('black-info-img.png') %>";
-    </script>
-
-    <script type="text/javascript">
       window.splashURL = "<%= image_url('homepage-img.png') %>";
-    </script>
-
-    <script type="text/javascript">
       window.infoURL = "<%= image_url('info-img.png') %>";
-    </script>
-
-    <script type="text/javascript">
       window.graphURL = "<%= image_url('graph-img.png') %>";
     </script>
 
     <%= favicon_link_tag asset_path('forest-badge.png') %>
-
-
     
     <% if current_user %>
       <script>
@@ -67,7 +43,6 @@
       };
       </script>
     <% end %>
-
 
   </head>
 

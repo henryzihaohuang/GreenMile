@@ -11,6 +11,10 @@ class DepositDisclosure extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    componentDidMount(){
+        
+    }
+
     handleSubmit(e) {
         debugger
         e.preventDefault();

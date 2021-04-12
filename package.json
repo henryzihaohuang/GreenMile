@@ -6,7 +6,12 @@
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "eslint": "^7.21.0",
+    "lint": "eslint ./",
+    "lint-staged": "^10.5.4",
+    "lint:fix": "eslint ./ --fix",
     "node-iex-cloud": "^2.0.31",
+    "precommit": "lint-staged",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-loading-io": "^2.2.1",
@@ -21,6 +26,7 @@
     "webpack-cli": "^4.4.0"
   },
   "devDependencies": {
+    "eslint-plugin-react-hooks": "^4.2.0",
     "redux-devtools-extension": "^2.13.8"
   },
   "scripts": {

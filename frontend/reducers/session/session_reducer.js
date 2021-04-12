@@ -13,6 +13,7 @@ const sessionReducer = (store = _nullSession, action) => {
         case LOGOUT_CURRENT_USER:
             return _nullSession;
         case UPDATE_BALANCE:
+            debugger
             return action.deposit;
         default:
             return store;

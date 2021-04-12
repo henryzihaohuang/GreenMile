@@ -2,6 +2,8 @@
 
 const sandbox_key = window.cloudAPIKey;
 
+
+
 export const fetchCompany = (abbreviation) => {
 
     const key = "Tsk_6488ea780c834facbb5e1124dd77e34a";
