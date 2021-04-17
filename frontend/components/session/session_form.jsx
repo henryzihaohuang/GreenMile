@@ -33,7 +33,6 @@ class SessionForm extends React.Component {
     handleErrors() {
 
         const errorClass = this.props.errors.length > 0 ? "error-revealed" : "error-hidden";
-        // debugger
         return (
             <ul className={errorClass}>
                 {this.props.errors.map((error, i) => {

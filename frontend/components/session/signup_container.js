@@ -3,19 +3,15 @@ import { signup, receiveErrors } from '../../actions/session';
 import SessionForm from './session_form';
 
 const mStP = (state, ownProps) => {
-    // debugger
     return {
-
         user: {
             firstName: "",
             lastName: "",
             email: "",
             password: ""
         },
-
         formType: 'signup',
-
-        errors: state.errors.session
+        errors: [state.errors.session]
     }
 
 };
