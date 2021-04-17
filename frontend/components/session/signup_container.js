@@ -11,7 +11,7 @@ const mStP = (state, ownProps) => {
             password: ""
         },
         formType: 'signup',
-        errors: [state.errors.session]
+        errors: state.errors.session
     }
 
 };
