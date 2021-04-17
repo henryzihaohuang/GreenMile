@@ -2,9 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import HomeBlockOneContainer from './hompage-block-1';
 
-class Homepage extends React.Component {
-    render(){
-            return (
+function Homepage() {
+        return (
             <section className="homepage-wrapper">
                 <span className="homepage-nav-bar">
                     <div className="green-mile-logo-block">
@@ -108,7 +107,6 @@ class Homepage extends React.Component {
                 </section>
             </section>
         )
-    }
-}
+};
 
 export default Homepage;
