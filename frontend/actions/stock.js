@@ -30,7 +30,6 @@ const receiveHistory = (abbr, prices) => {
 }
 
 const receiveSearchResults = (abbr) => {
-    debugger
     return {
         type: RECEIVE_SEARCH_RESULTS,
         abbr

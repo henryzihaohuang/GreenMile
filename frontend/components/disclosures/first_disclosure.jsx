@@ -2,7 +2,6 @@ import React from 'react';
 
 class FirstDisclosure extends React.Component{
     render () {
-        debugger
         return(
             <span className="modal-content">
                 <span>
@@ -18,8 +17,7 @@ class FirstDisclosure extends React.Component{
                 
             </span>
         )
-    }
-    
-}
+    };  
+};
 
 export default FirstDisclosure;

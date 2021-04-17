@@ -6,5 +6,6 @@ const mDtP = dispatch => {
     return {
         closeModal: () => dispatch(closeModal())
     };
+};
 
 export default connect(null, mDtP)(FirstDisclosure);

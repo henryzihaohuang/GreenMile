@@ -2,8 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import HomeBlockOneContainer from './hompage-block-1';
 
-function Homepage() {
-        return (
+class Homepage extends React.Component {
+    render(){
+            return (
             <section className="homepage-wrapper">
                 <span className="homepage-nav-bar">
                     <div className="green-mile-logo-block">
@@ -39,9 +40,11 @@ function Homepage() {
                             <p className="first-section-body">
                                 Commission-free investing, plus the tools you need to put your money in motion. Sign up and get your first stock for free. Certain limitations apply.
                             </p>
-                            <button className="body-signup-button">
-                                <Link to='/signup' className="body-signup-button-text"> Sign up</Link>
-                            </button>
+                            <Link to='/signup' className="body-signup-button-text">
+                                <button className="body-signup-button">
+                                    Sign up
+                                </button>
+                            </Link>
                             <div className="modal-page-wrapper" >
                                 <div className="info-img">
                                     <img  src={window.infoURL} /> 
@@ -107,6 +110,7 @@ function Homepage() {
                 </section>
             </section>
         )
-};
+    }
+}
 
 export default Homepage;

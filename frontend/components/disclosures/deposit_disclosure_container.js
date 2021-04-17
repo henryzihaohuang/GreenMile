@@ -6,8 +6,8 @@ import { closeModal } from '../../actions/modal';
 const mStP = (state, ownProps) => {
     return {
         currentUser: state.session.currentUser.id
-    }
-}
+    };
+};
 
 const mDtP = dispatch => {
     debugger

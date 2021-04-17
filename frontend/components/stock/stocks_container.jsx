@@ -6,7 +6,6 @@ import StocksShow from "./stocks_show";
 import { openModal } from '../../actions/modal';
 
 const mStP = (state, ownProps) => {
-    debugger
     return {
         entities: state.entities
     }
