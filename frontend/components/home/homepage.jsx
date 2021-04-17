@@ -25,9 +25,11 @@ class Homepage extends React.Component {
                         <span className="homepage-login-button">
                             <Link className="homepage-login-button-text-element" to="/login">Log In</Link>
                         </span>
-                        <button className="homepage-signup-button-block">
-                            <Link className="homepage-signup-button-text-element" to="/signup" >Sign up</Link>
-                        </button>
+                        <Link className="homepage-signup-button-text-element" to="/signup" >
+                            <button className="homepage-signup-button-block">
+                              Sign up
+                            </button>
+                        </Link>
                     </span>
                 </span>
                 <section className="first-section-wrapper">
