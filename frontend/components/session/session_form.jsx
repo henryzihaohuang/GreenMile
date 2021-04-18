@@ -33,33 +33,23 @@ class SessionForm extends React.Component {
     handleErrors() {
 
         const errorClass = this.props.errors.length > 0 ? "error-revealed" : "error-hidden";
-        if (this.props.errors.length > 0) {
-            return (
-                <ul className={errorClass}>
-                    {this.props.errors.map((error, i) => {
-                        return (
-                            <div>
-                                <li key={`${i}`}>{error}</li>
-                            </div>
-                        )
-                    })}
-                </ul>
-            )
-        }
+        return (
+            <ul className={errorClass}>
+                {this.props.errors.map((error, i) => {
+                    return (
+                        <div>
+                            <li key={`${i}`}>{error}</li>
+                        </div>
+                    )
+                })}
+            </ul>
+        )
     };
 
     
     handleDemo(e) {
         this.props.action({ email: "dollyparton@gmail.com", password: "password123" })
     }
-
-
-    // inputFocus(i) {
-    //     if (i.value == i.defaultValue) { i.value = ""; i.style.color = "#000"; }
-    // }
-    // inputBlur(i) {
-    //     if (i.value == "") { i.value = i.defaultValue; i.style.color = "#888"; }
-    // }
 
     render() {
         const signupPage = () => {

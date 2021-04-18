@@ -12,7 +12,6 @@ export const receiveCurrentUser = currentUser => ({
         lastName: currentUser.last_name,
         email: currentUser.email,
         password: currentUser.password,
-        balance: currentUser.balance
     }
 });
 
@@ -33,10 +32,10 @@ export const signup = (formUser) => {
         last_name: formUser.lastName,
         email: formUser.email,
         password: formUser.password,
-        balance: formUser.balance
     }
 
     return (dispatch) => {
+        debugger
         return postUser(translatedUser)
             .then((currentUser) => dispatch(receiveCurrentUser(currentUser)),
             (errors) => dispatch(receiveErrors(errors.responseJSON)));

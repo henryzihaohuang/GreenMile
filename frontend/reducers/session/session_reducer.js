@@ -1,20 +1,17 @@
 import { RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER } from '../../actions/session';
-import { UPDATE_BALANCE } from '../../actions/deposit';
 
 const _nullSession = {
     currentUser: null
 };
 
 const sessionReducer = (store = _nullSession, action) => {
+    debugger
     Object.freeze(store);
     switch (action.type) {
         case RECEIVE_CURRENT_USER:
             return Object.assign({}, { currentUser: action.currentUser });
         case LOGOUT_CURRENT_USER:
             return _nullSession;
-        case UPDATE_BALANCE:
-            debugger
-            return action.deposit;
         default:
             return store;
     }
